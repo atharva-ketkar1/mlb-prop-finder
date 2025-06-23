@@ -1,19 +1,19 @@
-player_pp,team,stat_type,prizepicks_line,player_dk,dk_line,dk_odds,dk_label
-Allan Winans,NYY,Pitcher Strikeouts,4.0,Allan Winans,4.5,−160,Under
-Bailey Ober,MIN,Pitcher Strikeouts,5.0,Bailey Ober,5.5,−160,Under
-Ben Brown,CHC,Pitcher Strikeouts,5.0,Ben Brown,4.5,−145,Over
-Braxton Ashcraft,PIT,Pitcher Strikeouts,2.5,Braxton Ashcraft,2.5,−130,Over
-Bryan Woo,SEA,Pitcher Strikeouts,5.0,Bryan Woo,5.5,−145,Under
-Chad Patrick,MIL,Pitcher Strikeouts,5.5,Chad Patrick,5.5,−120,Under
-Eduardo Rodriguez,AZ,Pitcher Strikeouts,5.0,Eduardo Rodriguez,5.5,−125,Under
-Framber Valdez,HOU,Pitcher Strikeouts,6.5,,,,
-Jack Kochanowicz,LAA,Pitcher Strikeouts,4.5,Jack Kochanowicz,4.5,−120,Under
-Kris Bubic,KC,Pitcher Strikeouts,5.5,,,,
-Matthew Liberatore,STL,Pitcher Strikeouts,3.5,Matthew Liberatore,3.5,−125,Over
-Mitchell Parker,WSH,Pitcher Strikeouts,3.0,Mitchell Parker,3.5,−150,Under
-Nick Lodolo,CIN,Pitcher Strikeouts,5.0,Nick Lodolo,5.5,−155,Under
-Paul Blackburn,NYM,Pitcher Strikeouts,3.0,Paul Blackburn,3.5,−140,Under
-Shane Smith,CWS,Pitcher Strikeouts,4.0,Shane Smith,4.5,−160,Under
-Spencer Schwellenbach,ATL,Pitcher Strikeouts,5.0,Spencer Schwellenbach,5.5,−130,Under
-Stephen Kolek,SD,Pitcher Strikeouts,3.5,Stephen Kolek,3.5,−125,Over
-Walker Buehler,BOS,Pitcher Strikeouts,5.0,Walker Buehler,4.5,−155,Over
+player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label
+Allan Winans,NYY,Pitcher Strikeouts,4.0,4.5,−160,Under
+Bailey Ober,MIN,Pitcher Strikeouts,5.0,5.5,−160,Under
+Ben Brown,CHC,Pitcher Strikeouts,5.0,4.5,−145,Over
+Braxton Ashcraft,PIT,Pitcher Strikeouts,2.5,2.5,−130,Over
+Bryan Woo,SEA,Pitcher Strikeouts,5.0,5.5,−145,Under
+Chad Patrick,MIL,Pitcher Strikeouts,5.5,5.5,−120,Under
+Eduardo Rodriguez,AZ,Pitcher Strikeouts,5.0,5.5,−125,Under
+Framber Valdez,HOU,Pitcher Strikeouts,6.5,,,
+Jack Kochanowicz,LAA,Pitcher Strikeouts,4.5,4.5,−120,Under
+Kris Bubic,KC,Pitcher Strikeouts,5.5,,,
+Matthew Liberatore,STL,Pitcher Strikeouts,3.5,3.5,−125,Over
+Mitchell Parker,WSH,Pitcher Strikeouts,3.0,3.5,−150,Under
+Nick Lodolo,CIN,Pitcher Strikeouts,5.0,5.5,−155,Under
+Paul Blackburn,NYM,Pitcher Strikeouts,3.0,3.5,−140,Under
+Shane Smith,CWS,Pitcher Strikeouts,4.0,4.5,−160,Under
+Spencer Schwellenbach,ATL,Pitcher Strikeouts,5.0,5.5,−130,Under
+Stephen Kolek,SD,Pitcher Strikeouts,3.5,3.5,−125,Over
+Walker Buehler,BOS,Pitcher Strikeouts,5.0,4.5,−155,Over

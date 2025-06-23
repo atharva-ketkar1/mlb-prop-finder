@@ -46,7 +46,7 @@ def main():
     mlb_slate = pd.merge(pp_df, dk_df, on='player_norm', how='left', suffixes=('_pp', '_dk'))
     mlb_slate = filter_best_dk_lines(mlb_slate)
 
-    mlb_slate = mlb_slate.drop(columns=['player_norm', 'market_name', 'dk_prob'], errors='ignore')
+    mlb_slate = mlb_slate.drop(columns=['player_dk','player_norm', 'market_name', 'dk_prob'], errors='ignore')
 
     save_props(mlb_slate)
 
