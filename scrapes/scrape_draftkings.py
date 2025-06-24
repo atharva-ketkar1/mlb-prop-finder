@@ -36,3 +36,7 @@ def scrape_draftkings_mlb():
         })
 
     return pd.DataFrame(dk_selections)
+
+
+if __name__ == "__main__":
+    print(scrape_draftkings_mlb())
