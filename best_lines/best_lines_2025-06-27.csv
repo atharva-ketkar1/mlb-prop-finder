@@ -1,6 +1,12 @@
-Player,Team,Line (PP),Line (DK),DK Line Diff,Line (UD),UD Line Diff,Best Bet,Average Odds,Edge
-Sawyer Gipson-Long,DET,4.0,4.5,0.5,4.5,0.5,UNDER,-172,13.4%
-Cade Horton,CHC,4.0,3.5,0.5,4.5,0.5,UNDER,-170,13.0%
-Sonny Gray,STL,6.0,5.5,0.5,5.5,0.5,OVER,-165,13.0%
-Dustin May,LAD,4.0,3.5,0.5,3.5,0.5,OVER,-161,12.5%
-David Peterson,NYM,5.0,4.5,0.5,4.5,0.5,OVER,-164,12.1%
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source
+Sawyer Gipson-Long,DET,4.0,4.5,4.5,UNDER,-172,13.4%,Stat
+Cade Horton,CHC,4.0,3.5,4.5,UNDER,-170,13.0%,Stat
+Sonny Gray,STL,6.0,5.5,5.5,OVER,-165,13.0%,Stat
+Dustin May,LAD,4.0,3.5,3.5,OVER,-161,12.5%,Stat
+David Peterson,NYM,5.0,4.5,4.5,OVER,-164,12.1%,Stat
+─── MODEL PICKS ───,,,,,,,,
+Brandon Walter,HOU,4.0,,,OVER,-16,2.67,Model
+Ryan Pepiot,TB,6.0,,,OVER,-20,1.8,Model
+Bryce Elder,ATL,4.0,,,OVER,-22,1.5,Model
+Merrill Kelly,AZ,5.5,,,OVER,-110,1.5,Model
+Brayan Bello,BOS,3.5,,,OVER,-133,1.3,Model

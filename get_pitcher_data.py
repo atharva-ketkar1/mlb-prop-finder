@@ -1,19 +1,18 @@
 from pybaseball import pitching_stats_range
 import pandas as pd
 from datetime import datetime, timedelta
+import os
 
 end_date = datetime.today()
 start_date = end_date - timedelta(days=30)
-
 start_str = start_date.strftime('%Y-%m-%d')
 end_str = end_date.strftime('%Y-%m-%d')
 
-# Get pitcher stats for that date range
 df = pitching_stats_range(start_str, end_str)
+df = df[df['GS'] > 0]  # only starters
 
-# Optional: filter for starting pitchers only
-df = df[df['GS'] > 0]  # Games Started > 0
+os.makedirs("data/pitcher_stats", exist_ok=True)
 
-# Save locally
-df.to_csv(f"data/pitcher_stats/logs_{end_str}.csv", index=False)
-print(f"Saved game logs from {start_str} to {end_str}")
+output_path = "data/pitcher_stats/logs_last_30_days.csv"
+df.to_csv(output_path, index=False)
+print(f"Saved logs ({start_str} → {end_str})")

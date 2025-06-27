@@ -1,140 +1,140 @@
+#!/usr/bin/env python3
 import pandas as pd
 import os
+import re
+import unicodedata
 from datetime import date
+
+def normalize_name(name: str) -> str:
+    if pd.isna(name):
+        return ""
+    n = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
+    n = n.lower().strip()
+    n = re.sub(r"\b(jr|sr|ii|iii|iv|v)\b\.?", "", n)
+    n = re.sub(r"\s*\([^)]*\)", "", n)
+    return re.sub(r"\s+", " ", n).strip()
 
 def odds_to_prob(odds):
     try:
-        odds = str(odds).replace('−', '-').strip()
-        odds = int(odds)
-    except (ValueError, TypeError):
+        o = int(str(odds).replace('−','-'))
+    except:
         return None
-    if odds > 0:
-        return 100 / (odds + 100)
-    else:
-        return -odds / (-odds + 100)
+    return 100/(o+100) if o>0 else -o/(-o+100)
 
-def average_odds(odds1, odds2):
-    try:
-        odds1 = int(str(odds1).replace('−', '-')) if odds1 is not None else None
-        odds2 = int(str(odds2).replace('−', '-')) if odds2 is not None else None
-    except ValueError:
-        return None
+def average_odds(o1, o2):
+    vals = []
+    for o in (o1, o2):
+        try:
+            vals.append(int(str(o).replace('−','-')))
+        except:
+            pass
+    return int(round(sum(vals)/len(vals))) if vals else None
 
-    if odds1 is not None and odds2 is not None:
-        return int(round((odds1 + odds2) / 2))
-    elif odds1 is not None:
-        return odds1
-    elif odds2 is not None:
-        return odds2
-    else:
-        return None
-
-def load_latest_slate(input_dir="data/mlb_slates", prefix="mlb_pitcher_slate"):
-    today = date.today().isoformat()
-    filename = f"{prefix}_{today}.csv"
-    filepath = os.path.join(input_dir, filename)
-    if not os.path.exists(filepath):
-        raise FileNotFoundError(f"Slate file not found: {filepath}")
-    return pd.read_csv(filepath)
-
-# Use ChatGPT to calculate edges between PrizePicks, DraftKings, and Underdog lines
-def calculate_edges(df, line_tolerance=0.5):
-    df['dk_line_diff'] = (df['dk_line'] - df['prizepicks_line']).abs()
-    df['ud_line_diff'] = (df['line_ud'] - df['prizepicks_line']).abs()
-
-    df['dk_line_match'] = df['dk_line_diff'] <= line_tolerance
-    df['ud_line_match'] = df['ud_line_diff'] <= line_tolerance
-
-    def select_odds(row):
-        over_prob_ud = under_prob_ud = None
-
-        over_prob_ud = odds_to_prob(row['over_odds_ud']) if row['ud_line_match'] else None
-        under_prob_ud = odds_to_prob(row['under_odds_ud']) if row['ud_line_match'] else None
-
-        dk_prob = odds_to_prob(row['dk_odds']) if row['dk_line_match'] else None
-
-        edge_over = over_prob_ud - 0.5 if over_prob_ud is not None else None
-        edge_under = under_prob_ud - 0.5 if under_prob_ud is not None else None
-
-        if edge_over is not None and edge_under is not None:
-            best_bet = 'OVER' if edge_over > edge_under else 'UNDER'
-            edge = max(edge_over, edge_under)
-        elif dk_prob is not None:
-            edge = dk_prob - 0.5
-            best_bet = 'DK_ODDS'
-        else:
-            best_bet = None
-            edge = None
-
-        return pd.Series({
-            'edge_over': edge_over,
-            'edge_under': edge_under,
-            'best_bet': best_bet,
-            'edge': edge
-        })
-
-    edges = df.apply(select_odds, axis=1)
-    df = pd.concat([df, edges], axis=1)
-
-    def get_avg_odds(row):
-        odds_to_average = []
-        if row['dk_line_match']:
-            odds_to_average.append(row['dk_odds'])
-        if row['ud_line_match']:
-            if row['best_bet'] == 'OVER':
-                odds_to_average.append(row['over_odds_ud'])
-            elif row['best_bet'] == 'UNDER':
-                odds_to_average.append(row['under_odds_ud'])
-
-        return average_odds(*odds_to_average)
-
-    df['avg_line'] = df.apply(get_avg_odds, axis=1)
-
-    df['dk_line_diff'] = df['dk_line_diff'].round(2)
-    df['ud_line_diff'] = df['ud_line_diff'].round(2)
-
+def load_slate(today):
+    path = f"data/mlb_slates/mlb_pitcher_slate_{today}.csv"
+    df = pd.read_csv(path)
+    df['player_norm'] = df['player_pp'].apply(normalize_name)
     return df
 
-# Use ChatGPT to generate the top props based on the calculated edges
-def get_top_props(df, top_n=5):
-    filtered = df.dropna(subset=['edge'])
-    top_props = filtered.sort_values(by='edge', ascending=False).head(top_n).copy()
+def calculate_edges(df, tol=0.5):
+    df = df.copy()
+    df['dk_line_diff'] = (df['dk_line'] - df['prizepicks_line']).abs()
+    df['ud_line_diff'] = (df['line_ud'] - df['prizepicks_line']).abs()
+    df['dk_ok'] = df['dk_line_diff']<=tol
+    df['ud_ok'] = df['ud_line_diff']<=tol
 
-    top_props['Edge'] = (top_props['edge'] * 100).round(1).astype(str) + '%'
+    def pick_edge(r):
+        o_ud = odds_to_prob(r['over_odds_ud']) if r.ud_ok else None
+        u_ud = odds_to_prob(r['under_odds_ud']) if r.ud_ok else None
+        dk_p = odds_to_prob(r['dk_odds']) if r.dk_ok else None
 
-    def format_odds(o):
-        if pd.isna(o):
-            return None
-        o = int(o)
-        return f"+{o}" if o > 0 else str(o)
-    top_props['Average Odds'] = top_props['avg_line'].apply(format_odds)
+        edges = {}
+        if o_ud is not None and u_ud is not None:
+            edges['best_bet'] = 'OVER' if o_ud>u_ud else 'UNDER'
+            edges['edge']    = max(o_ud,u_ud)-0.5
+        elif dk_p is not None:
+            edges['best_bet'] = 'DK_ODDS'
+            edges['edge']    = dk_p-0.5
+        else:
+            edges['best_bet'] = None
+            edges['edge']    = None
+        return pd.Series(edges)
 
-    return top_props[[
-        'player_pp', 'team', 'prizepicks_line', 'dk_line', 'dk_line_diff', 'line_ud', 'ud_line_diff',
-        'best_bet', 'Average Odds', 'Edge'
-    ]].rename(columns={
-        'player_pp': 'Player',
-        'team': 'Team',
-        'prizepicks_line': 'Line (PP)',
-        'dk_line': 'Line (DK)',
-        'dk_line_diff': 'DK Line Diff',
-        'line_ud': 'Line (UD)',
-        'ud_line_diff': 'UD Line Diff',
-        'best_bet': 'Best Bet'
-    })
+    df[['best_bet','edge']] = df.apply(pick_edge, axis=1)
+    df['avg_line'] = df.apply(
+        lambda r: average_odds(
+            r['dk_odds'] if r.dk_ok else None,
+            (r['over_odds_ud'] if r.best_bet=='OVER' else
+             r['under_odds_ud'] if r.best_bet=='UNDER' else None)
+        ), axis=1
+    )
+    return df
 
-def save_top_props(df, output_dir="best_lines"):
-    today = date.today().isoformat()
-    os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, f"best_lines_{today}.csv")
-    df.to_csv(output_path, index=False)
-    print(f"Top props saved to {output_path}")
+def get_top_stat(df, n=5):
+    df2 = calculate_edges(df).dropna(subset=['edge'])
+    top = df2.nlargest(n, 'edge').copy()
+    top['Edge'] = (top['edge']*100).round(1).astype(str)+'%'
+    top['Average Odds'] = top['avg_line'].apply(
+        lambda x: f"{x:+d}" if x is not None else None
+    )
+    return top.rename(columns={
+        'player_pp':'Player', 'team':'Team',
+        'prizepicks_line':'Line (PP)', 'dk_line':'Line (DK)',
+        'line_ud':'Line (UD)', 'best_bet':'Pick'
+    })[
+        ['Player','Team','Line (PP)','Line (DK)','Line (UD)',
+         'Pick','Average Odds','Edge']
+    ].assign(Source='Stat')
+
+def load_logs():
+    path = f"data/pitcher_stats/logs_last_30_days.csv"
+    logs = pd.read_csv(path)
+    logs = logs[logs['GS']>0].copy()
+    logs['player_norm'] = logs['Name'].apply(normalize_name)
+    sumry = logs.groupby('player_norm',as_index=False).agg({'SO':'sum','G':'sum'})
+    sumry['predicted_ks'] = sumry['SO']/sumry['G']
+    return sumry[['player_norm','predicted_ks']]
+
+def get_top_model(slate, logs, n=5):
+    df = slate.merge(logs, on='player_norm', how='left')
+    df['predicted_ks'] = df['predicted_ks'].fillna(df['prizepicks_line'])
+    df['Pick'] = df.apply(
+        lambda r: 'OVER' if r.predicted_ks > r.prizepicks_line else 'UNDER',
+        axis=1
+    )
+    df['Edge'] = (df['predicted_ks'] - df['prizepicks_line']).round(2)
+
+    def model_avg_odds(r):
+        dk_ok = abs(r['dk_line'] - r['prizepicks_line']) <= 0.5
+        dk = r['dk_odds'] if dk_ok else None
+        ud = r['over_odds_ud'] if r['Pick']=='OVER' else r['under_odds_ud']
+        avg = average_odds(dk, ud)
+        return f"{avg:+d}" if avg is not None else None
+
+    df['Average Odds'] = df.apply(model_avg_odds, axis=1)
+
+    top = df.nlargest(n, 'Edge').copy()
+    return top.rename(columns={'player_pp':'Player','team':'Team'})[
+        ['Player','Team','prizepicks_line','Pick','Average Odds','Edge']
+    ].rename(columns={'prizepicks_line':'Line (PP)'}).assign(Source='Model')
+
 
 def main():
-    df = load_latest_slate()
-    df = calculate_edges(df)
-    top_props = get_top_props(df)
-    save_top_props(top_props)
+    today  = date.today().isoformat()
+    slate  = load_slate(today)
+    logs   = load_logs()
+    stat5  = get_top_stat(slate, n=5)
+    model5 = get_top_model(slate, logs, n=5)
 
-if __name__ == "__main__":
+    divider = pd.DataFrame([{
+        'Player':'─── MODEL PICKS ───','Team':'','Line (PP)':'',
+        'Pick':'','Average Odds':'','Edge':'','Source':''
+    }])
+
+    out = pd.concat([stat5, divider, model5], ignore_index=True)
+    os.makedirs("best_lines",exist_ok=True)
+    out.to_csv(f"best_lines/best_lines_{today}.csv",index=False)
+    print("best_lines updated:", f"best_lines/best_lines_{today}.csv")
+
+if __name__=='__main__':
     main()
