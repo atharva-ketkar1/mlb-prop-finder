@@ -9,7 +9,7 @@ start_str = start_date.strftime('%Y-%m-%d')
 end_str = end_date.strftime('%Y-%m-%d')
 
 df = pitching_stats_range(start_str, end_str)
-df = df[df['GS'] > 0]  # only starters
+df = df[df['GS'] > 0]  
 
 os.makedirs("data/pitcher_stats", exist_ok=True)
 

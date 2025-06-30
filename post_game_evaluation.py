@@ -1,7 +1,3 @@
-"""
-Try to evaluate the game after it has ended and update the csv files with results.
-"""
-
 import pandas as pd
 import os
 import re
@@ -68,7 +64,6 @@ def evaluate_file(path):
     df['Result']    = results
     df.to_csv(path, index=False)
     print(f"Updated: {path}\n")
-
 
 def main():
     files = glob("best_lines/best_lines_*.csv")
