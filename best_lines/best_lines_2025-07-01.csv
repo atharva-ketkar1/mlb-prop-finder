@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source
+Brady Singer,CIN,5.0,5.5,5.5,UNDER,-168,13.8%,Stat
+Shane Smith,CWS,4.0,3.5,3.5,OVER,-155,13.0%,Stat
+Jacob deGrom,TEX,7.0,6.5,7.5,UNDER,-162,12.1%,Stat
+Tyler Anderson,LAA,4.0,3.5,4.5,UNDER,-162,12.1%,Stat
+Gavin Williams,CLE,5.0,5.5,5.5,UNDER,-161,11.8%,Stat
+─── MODEL PICKS ───,,,,,,,,
+Max Fried,NYY,5.0,,,OVER,-147,1.8,Model
+Freddy Peralta,MIL,5.5,,,OVER,-120,0.9,Model
+Grant Holmes,ATL,7.0,,,OVER,-145,0.8,Model
+Tyler Anderson,LAA,4.0,,,OVER,-18,0.8,Model
+Jeffrey Springs,ATH,4.5,,,OVER,-116,0.7,Model

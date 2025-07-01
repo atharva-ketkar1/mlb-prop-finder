@@ -23,7 +23,12 @@ def evaluate_file(path):
         print(f"Skipping {os.path.basename(path)} — game may not be finished.")
         return
 
-    print(f"Evaluating {os.path.basename(path)} for {slate_date}")
+    df_check = pd.read_csv(path)
+    if 'Result' in df_check.columns and df_check['Result'].notna().all():
+        print(f"Skipping {os.path.basename(path)} — already evaluated.")
+        return
+
+    print(f"→ Evaluating {os.path.basename(path)} for {slate_date}")
 
     try:
         logs = pitching_stats_range(slate_date, slate_date)
@@ -31,15 +36,11 @@ def evaluate_file(path):
         print(f"Failed to fetch stats for {slate_date}: {e}")
         return
 
-    if logs.empty:
-        print(f"No pitching data found for {slate_date}, skipping.")
-        return
-
     logs = logs[(logs['GS'] > 0) | (logs['IP'] > 0)]
     logs['player_norm'] = logs['Name'].apply(normalize_name)
     actual = logs.set_index('player_norm')['SO'].to_dict()
 
-    df = pd.read_csv(path)
+    df = df_check.copy()  
     actual_sos = []
     results = []
     for _, row in df.iterrows():
@@ -50,7 +51,7 @@ def evaluate_file(path):
         line = row.get('Line (PP)')
         pick = row.get('Best Bet') or row.get('Pick')
 
-        if so is None or pd.isna(line) or pick not in ('OVER','UNDER'):
+        if so is None or pd.isna(line) or pick not in ('OVER', 'UNDER'):
             results.append('UNKNOWN')
         else:
             if so == line:
@@ -61,7 +62,7 @@ def evaluate_file(path):
                 results.append('HIT' if so < line else 'MISS')
 
     df['Actual_SO'] = actual_sos
-    df['Result']    = results
+    df['Result'] = results
     df.to_csv(path, index=False)
     print(f"Updated: {path}\n")
 

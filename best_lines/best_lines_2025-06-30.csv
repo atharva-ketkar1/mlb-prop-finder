@@ -1,12 +1,12 @@
-Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source
-Michael Wacha,KC,5.0,4.5,4.5,OVER,-169,13.4%,Stat
-George Kirby,SEA,5.0,4.5,4.5,OVER,-162,13.0%,Stat
-Patrick Corbin,TEX,5.0,4.5,4.5,OVER,-166,12.5%,Stat
-Trevor Rogers,BAL,4.0,4.5,4.5,UNDER,-161,12.5%,Stat
-Drew Rasmussen,TB,5.0,5.5,5.5,UNDER,-161,11.8%,Stat
-─── MODEL PICKS ───,,,,,,,,
-Jacob Lopez,ATH,5.0,,,OVER,-20,2.6,Model
-Chase Burns,CIN,6.0,,,OVER,-157,2.0,Model
-Zack Wheeler,PHI,6.0,,,OVER,-18,2.0,Model
-Logan Webb,SF,5.5,,,OVER,-130,1.7,Model
-Garrett Crochet,BOS,8.0,,,OVER,-18,1.2,Model
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Actual_SO,Result
+Michael Wacha,KC,5.0,4.5,4.5,OVER,-169.0,13.4%,Stat,1.0,MISS
+George Kirby,SEA,5.0,4.5,4.5,OVER,-162.0,13.0%,Stat,5.0,PUSH
+Patrick Corbin,TEX,5.0,4.5,4.5,OVER,-166.0,12.5%,Stat,6.0,HIT
+Trevor Rogers,BAL,4.0,4.5,4.5,UNDER,-161.0,12.5%,Stat,5.0,MISS
+Drew Rasmussen,TB,5.0,5.5,5.5,UNDER,-161.0,11.8%,Stat,2.0,HIT
+─── MODEL PICKS ───,,,,,,,,,,UNKNOWN
+Jacob Lopez,ATH,5.0,,,OVER,-20.0,2.6,Model,1.0,MISS
+Chase Burns,CIN,6.0,,,OVER,-157.0,2.0,Model,0.0,MISS
+Zack Wheeler,PHI,6.0,,,OVER,-18.0,2.0,Model,10.0,HIT
+Logan Webb,SF,5.5,,,OVER,-130.0,1.7,Model,7.0,HIT
+Garrett Crochet,BOS,8.0,,,OVER,-18.0,1.2,Model,9.0,HIT

@@ -2,6 +2,7 @@ import requests
 import pandas as pd
 
 DESIRED_STATS = ["Pitcher Strikeouts"]
+#DESIRED_STATS = ["Hits+Runs+RBIs"]
 
 def scrape_prizepicks_mlb():
     url = "https://api.prizepicks.com/projections"
@@ -37,3 +38,6 @@ def scrape_prizepicks_mlb():
         })
 
     return pd.DataFrame(all_records)
+
+if __name__ == "__main__":
+    print(scrape_prizepicks_mlb())
