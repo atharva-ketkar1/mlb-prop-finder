@@ -52,7 +52,7 @@ def evaluate_file(path):
         pick = row.get('Best Bet') or row.get('Pick')
 
         if so is None or pd.isna(line) or pick not in ('OVER', 'UNDER'):
-            results.append('UNKNOWN')
+            results.append('')
         else:
             if so == line:
                 results.append('PUSH')
