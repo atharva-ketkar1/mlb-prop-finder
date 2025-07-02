@@ -1,26 +1,26 @@
-player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_odds_ud,under_odds_ud
-Andrew Heaney,PIT,Pitcher Strikeouts,4.0,4.5,−155,Under,4.5,+129,-173
-Cal Quantrill,MIA,Pitcher Strikeouts,3.5,3.5,−125,Under,3.5,-130,-103
-Chase Burns,CIN,Pitcher Strikeouts,5.0,5.5,−165,Under,5.5,+107,-141
-Charlie Morton,BAL,Pitcher Strikeouts,5.0,5.5,−145,Under,5.5,+110,-145
-Chris Paddack Jr.,MIN,Pitcher Strikeouts,4.0,4.5,−145,Under,4.5,+104,-137
-Eric Lauer,TOR,Pitcher Strikeouts,4.0,4.5,−170,Under,4.5,+137,-182
-Freddy Peralta,MIL,Pitcher Strikeouts,6.5,6.5,−120,Under,6.5,-122,-109
-Framber Valdez,HOU,Pitcher Strikeouts,6.5,6.5,−125,Under,6.5,-103,-130
-Garrett Crochet,BOS,Pitcher Strikeouts,8.0,8.5,−140,Under,8.5,+106,-141
-Germán Márquez,COL,Pitcher Strikeouts,3.0,3.5,−155,Under,3.5,+104,-137
-Jack Dreyer,LAD,Pitcher Strikeouts,1.5,1.5,−120,Over,1.5,-115,-115
-Jacob Latz,TEX,Pitcher Strikeouts,5.0,4.5,−140,Over,4.5,-143,+108
-Jameson Taillon,CHC,Pitcher Strikeouts,3.5,3.5,−125,Over,3.5,-132,+100
-Justin Verlander,SF,Pitcher Strikeouts,4.5,4.5,−125,Under,4.5,-115,-115
-Logan Allen,CLE,Pitcher Strikeouts,3.5,3.5,−115,Over,3.5,-115,-115
-Luis Castillo,SEA,Pitcher Strikeouts,5.5,5.5,−135,Under,5.5,-115,-115
-Luis Severino,ATH,Pitcher Strikeouts,4.0,4.5,−130,Under,4.5,-102,-132
-Michael McGreevy,STL,Pitcher Strikeouts,4.0,3.5,−165,Over,4.5,+132,-176
-Ranger Suárez,PHI,Pitcher Strikeouts,5.0,4.5,−140,Over,4.5,-159,+120
-Ryan Bergert,SD,Pitcher Strikeouts,4.0,4.5,−170,Under,4.5,+128,-170
-Ryne Nelson,AZ,Pitcher Strikeouts,4.5,4.5,−125,Under,4.5,-108,-124
-Spencer Strider,ATL,Pitcher Strikeouts,6.5,6.5,−115,Under,6.5,-115,-115
-Taj Bradley,TB,Pitcher Strikeouts,4.5,4.5,−140,Under,4.5,+100,-132
-Tarik Skubal,DET,Pitcher Strikeouts,8.0,8.5,−155,Under,8.5,+121,-162
-Trevor Williams,WSH,Pitcher Strikeouts,3.0,3.5,−160,Under,3.5,+121,-162
+player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_odds_ud,under_odds_ud,Actual_SO,Result
+Andrew Heaney,PIT,Pitcher Strikeouts,4.0,4.5,−155,Under,4.5,129,-173,3.0,HIT
+Cal Quantrill,MIA,Pitcher Strikeouts,3.5,3.5,−125,Under,3.5,-130,-103,3.0,HIT
+Chase Burns,CIN,Pitcher Strikeouts,5.0,5.5,−165,Under,5.5,107,-141,8.0,MISS
+Charlie Morton,BAL,Pitcher Strikeouts,5.0,5.5,−145,Under,5.5,110,-145,3.0,HIT
+Chris Paddack Jr.,MIN,Pitcher Strikeouts,4.0,4.5,−145,Under,4.5,104,-137,4.0,PUSH
+Eric Lauer,TOR,Pitcher Strikeouts,4.0,4.5,−170,Under,4.5,137,-182,5.0,MISS
+Freddy Peralta,MIL,Pitcher Strikeouts,6.5,6.5,−120,Under,6.5,-122,-109,8.0,MISS
+Framber Valdez,HOU,Pitcher Strikeouts,6.5,6.5,−125,Under,6.5,-103,-130,3.0,HIT
+Garrett Crochet,BOS,Pitcher Strikeouts,8.0,8.5,−140,Under,8.5,106,-141,10.0,MISS
+Germán Márquez,COL,Pitcher Strikeouts,3.0,3.5,−155,Under,3.5,104,-137,,
+Jack Dreyer,LAD,Pitcher Strikeouts,1.5,1.5,−120,Over,1.5,-115,-115,0.0,MISS
+Jacob Latz,TEX,Pitcher Strikeouts,5.0,4.5,−140,Over,4.5,-143,108,4.0,MISS
+Jameson Taillon,CHC,Pitcher Strikeouts,3.5,3.5,−125,Over,3.5,-132,100,3.0,MISS
+Justin Verlander,SF,Pitcher Strikeouts,4.5,4.5,−125,Under,4.5,-115,-115,5.0,MISS
+Logan Allen,CLE,Pitcher Strikeouts,3.5,3.5,−115,Over,3.5,-115,-115,4.0,HIT
+Luis Castillo,SEA,Pitcher Strikeouts,5.5,5.5,−135,Under,5.5,-115,-115,3.0,HIT
+Luis Severino,ATH,Pitcher Strikeouts,4.0,4.5,−130,Under,4.5,-102,-132,2.0,HIT
+Michael McGreevy,STL,Pitcher Strikeouts,4.0,3.5,−165,Over,4.5,132,-176,1.0,MISS
+Ranger Suárez,PHI,Pitcher Strikeouts,5.0,4.5,−140,Over,4.5,-159,120,,
+Ryan Bergert,SD,Pitcher Strikeouts,4.0,4.5,−170,Under,4.5,128,-170,4.0,PUSH
+Ryne Nelson,AZ,Pitcher Strikeouts,4.5,4.5,−125,Under,4.5,-108,-124,7.0,MISS
+Spencer Strider,ATL,Pitcher Strikeouts,6.5,6.5,−115,Under,6.5,-115,-115,8.0,MISS
+Taj Bradley,TB,Pitcher Strikeouts,4.5,4.5,−140,Under,4.5,100,-132,4.0,HIT
+Tarik Skubal,DET,Pitcher Strikeouts,8.0,8.5,−155,Under,8.5,121,-162,8.0,PUSH
+Trevor Williams,WSH,Pitcher Strikeouts,3.0,3.5,−160,Under,3.5,121,-162,3.0,PUSH

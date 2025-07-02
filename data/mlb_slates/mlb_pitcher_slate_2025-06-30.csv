@@ -1,16 +1,16 @@
-player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_odds_ud,under_odds_ud
-Andrew Heaney,PIT,Pitcher Strikeouts,4.0,3.5,−140,Over,3.5,-145,+109
-Carlos Rodón,NYY,Pitcher Strikeouts,5.0,5.5,−130,Under,5.5,+104,-137
-Chase Burns,CIN,Pitcher Strikeouts,6.0,5.5,−155,Over,5.5,-159,+120
-Drew Rasmussen,TB,Pitcher Strikeouts,5.0,5.5,−160,Under,5.5,+121,-162
-Erick Fedde,STL,Pitcher Strikeouts,4.0,3.5,−155,Over,3.5,-154,+116
-Garrett Crochet,BOS,Pitcher Strikeouts,8.0,8.5,−150,Under,8.5,+115,-154
-George Kirby,SEA,Pitcher Strikeouts,5.0,4.5,−155,Over,4.5,-170,+127
-Jacob Lopez,ATH,Pitcher Strikeouts,5.0,5.5,−150,Under,5.5,+110,-145
-Logan Webb,SF,Pitcher Strikeouts,5.5,5.5,−135,Over,5.5,-124,-108
-Max Scherzer,TOR,Pitcher Strikeouts,5.5,5.5,−125,Over,5.5,-122,-108
-Michael Wacha,KC,Pitcher Strikeouts,5.0,4.5,−165,Over,4.5,-173,+130
-Patrick Corbin,TEX,Pitcher Strikeouts,5.0,4.5,−165,Over,4.5,-167,+126
-Ryne Nelson,AZ,Pitcher Strikeouts,4.5,4.5,−125,Under,4.5,+101,-134
-Trevor Rogers,BAL,Pitcher Strikeouts,4.0,4.5,−155,Under,4.5,+125,-167
-Zack Wheeler,PHI,Pitcher Strikeouts,6.0,6.5,−145,Under,6.5,+108,-143
+player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_odds_ud,under_odds_ud,Actual_SO,Result
+Andrew Heaney,PIT,Pitcher Strikeouts,4.0,3.5,−140,Over,3.5,-145,109,7.0,HIT
+Carlos Rodón,NYY,Pitcher Strikeouts,5.0,5.5,−130,Under,5.5,104,-137,,
+Chase Burns,CIN,Pitcher Strikeouts,6.0,5.5,−155,Over,5.5,-159,120,0.0,MISS
+Drew Rasmussen,TB,Pitcher Strikeouts,5.0,5.5,−160,Under,5.5,121,-162,2.0,HIT
+Erick Fedde,STL,Pitcher Strikeouts,4.0,3.5,−155,Over,3.5,-154,116,0.0,MISS
+Garrett Crochet,BOS,Pitcher Strikeouts,8.0,8.5,−150,Under,8.5,115,-154,9.0,MISS
+George Kirby,SEA,Pitcher Strikeouts,5.0,4.5,−155,Over,4.5,-170,127,5.0,PUSH
+Jacob Lopez,ATH,Pitcher Strikeouts,5.0,5.5,−150,Under,5.5,110,-145,1.0,HIT
+Logan Webb,SF,Pitcher Strikeouts,5.5,5.5,−135,Over,5.5,-124,-108,7.0,HIT
+Max Scherzer,TOR,Pitcher Strikeouts,5.5,5.5,−125,Over,5.5,-122,-108,7.0,HIT
+Michael Wacha,KC,Pitcher Strikeouts,5.0,4.5,−165,Over,4.5,-173,130,1.0,MISS
+Patrick Corbin,TEX,Pitcher Strikeouts,5.0,4.5,−165,Over,4.5,-167,126,6.0,HIT
+Ryne Nelson,AZ,Pitcher Strikeouts,4.5,4.5,−125,Under,4.5,101,-134,7.0,MISS
+Trevor Rogers,BAL,Pitcher Strikeouts,4.0,4.5,−155,Under,4.5,125,-167,5.0,MISS
+Zack Wheeler,PHI,Pitcher Strikeouts,6.0,6.5,−145,Under,6.5,108,-143,10.0,MISS
