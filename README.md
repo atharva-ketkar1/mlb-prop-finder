@@ -8,5 +8,5 @@ Already got a 10$ minimum on PrizePicks for discounted projections. Up a few hun
   <strong>July 1st, 2025</strong>
   <br/><br/>
   <img src="images/image.png" alt="Sample 1" width="200" style="margin-right:20px; vertical-align:middle;"/>
-  <img src="images/image.png" alt="Sample 2" width="200" style="vertical-align:middle;"/>
+  <img src="images/image2.png" alt="Sample 2" width="200" style="vertical-align:middle;"/>
 </p>
