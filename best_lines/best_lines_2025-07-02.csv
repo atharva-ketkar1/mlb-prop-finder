@@ -1,12 +1,12 @@
-Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
-Tomoyuki Sugano,BAL,3.0,2.5,3.5,OVER,-175,13.6%,Stat,
-Landen Roupp,SF,4.0,3.5,3.5,OVER,-160,11.5%,Stat,
-Cristopher Sánchez,PHI,5.0,5.5,,UNDER,-155,10.8%,Stat,
-MacKenzie Gore,WSH,7.0,7.5,,UNDER,-155,10.8%,Stat,
-Tanner Bibee,CLE,5.0,5.5,5.5,UNDER,-155,10.8%,Stat,
-─── MODEL PICKS ───,,,,,,,,,
-Will Warren,NYY,4.5,,,OVER,-115,2.35,Model,6.85
-Yusei Kikuchi,LAA,5.5,,,OVER,-125,2.25,Model,7.75
-Tanner Bibee,CLE,5.0,,,OVER,-155,1.29,Model,6.29
-Dylan Cease,SD,6.5,,,OVER,-125,1.27,Model,7.77
-Hunter Brown,HOU,7.0,,,OVER,-150,1.22,Model,8.22
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks,Actual_SO,Result
+Tomoyuki Sugano,BAL,3.0,2.5,3.5,OVER,-175.0,13.6%,Stat,,5.0,HIT
+Landen Roupp,SF,4.0,3.5,3.5,OVER,-160.0,11.5%,Stat,,4.0,PUSH
+Cristopher Sánchez,PHI,5.0,5.5,,UNDER,-155.0,10.8%,Stat,,,
+MacKenzie Gore,WSH,7.0,7.5,,UNDER,-155.0,10.8%,Stat,,2.0,HIT
+Tanner Bibee,CLE,5.0,5.5,5.5,UNDER,-155.0,10.8%,Stat,,5.0,PUSH
+─── MODEL PICKS ───,,,,,,,,,,,
+Will Warren,NYY,4.5,,,OVER,-115.0,2.35,Model,6.85,4.0,MISS
+Yusei Kikuchi,LAA,5.5,,,OVER,-125.0,2.25,Model,7.75,7.0,HIT
+Tanner Bibee,CLE,5.0,,,OVER,-155.0,1.29,Model,6.29,5.0,PUSH
+Dylan Cease,SD,6.5,,,OVER,-125.0,1.27,Model,7.77,4.0,MISS
+Hunter Brown,HOU,7.0,,,OVER,-150.0,1.22,Model,8.22,8.0,HIT

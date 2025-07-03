@@ -103,7 +103,7 @@ def get_top_stat(df, n=5):
     top = df2.nlargest(n, 'edge').copy()
     top['Edge'] = (top['edge'] * 100).round(1).astype(str) + '%'
     top['Average Odds'] = top['avg_line'].apply(
-        lambda x: f"{x:+d}" if x is not None else None
+        lambda x: f"{x:+.0f}" if x is not None else None
     )
     return top.rename(columns={
         'player_pp': 'Player', 'team': 'Team',

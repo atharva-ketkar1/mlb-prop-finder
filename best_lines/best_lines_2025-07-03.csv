@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
+Dietrich Enns,DET,4.0,3.5,4.5,OVER,-165,12.3%,Stat,
+Kyle Freeland,COL,3.0,3.5,3.5,UNDER,-165,12.3%,Stat,
+David Peterson,NYM,5.0,4.5,4.5,OVER,-150,10.0%,Stat,
+Jake Irvin,WSH,4.0,4.5,4.5,UNDER,-145,9.2%,Stat,
+José Quintana,MIL,4.0,3.5,3.5,OVER,-145,9.2%,Stat,
+─── MODEL PICKS ───,,,,,,,,,
+Clarke Schmidt,NYY,4.0,,,OVER,-130,1.86,Model,5.86
+Brandon Walter,HOU,4.5,,,OVER,-120,1.26,Model,5.76
+Quinn Priester,MIL,4.5,,,OVER,,1.23,Model,5.73
+Logan Evans,SEA,3.5,,,OVER,-130,0.88,Model,4.38
+Seth Lugo,KC,5.5,,,OVER,-115,0.78,Model,6.28
