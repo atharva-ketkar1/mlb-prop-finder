@@ -1,10 +1,7 @@
 import pandas as pd
 import os
-import re
-import unicodedata
 from datetime import date
-from predict_strikeouts import predict_strikeouts, normalize_name  # Import model + normalizer
-
+from predict_strikeouts import predict_strikeouts, normalize_name  
 
 def odds_to_prob(odds):
     try:
@@ -39,21 +36,56 @@ def calculate_edges(df, tol=0.5):
     df['ud_ok'] = df['ud_line_diff'] <= tol
 
     def pick_edge(r):
-        o_ud = odds_to_prob(r['over_odds_ud']) if r.ud_ok else None
-        u_ud = odds_to_prob(r['under_odds_ud']) if r.ud_ok else None
-        dk_p = odds_to_prob(r['dk_odds']) if r.dk_ok else None
-
         edges = {}
-        if o_ud is not None and u_ud is not None:
-            edges['best_bet'] = 'OVER' if o_ud > u_ud else 'UNDER'
-            edges['edge'] = max(o_ud, u_ud) - 0.5
-        elif dk_p is not None:
-            edges['best_bet'] = 'DK_ODDS'
-            edges['edge'] = dk_p - 0.5
-        else:
-            edges['best_bet'] = None
-            edges['edge'] = None
+
+        try:
+            dk_odds = int(str(r['dk_odds']).replace('−', '-'))
+        except:
+            dk_odds = None
+
+        try:
+            over_ud_odds = int(str(r['over_odds_ud']).replace('−', '-'))
+        except:
+            over_ud_odds = None
+
+        try:
+            under_ud_odds = int(str(r['under_odds_ud']).replace('−', '-'))
+        except:
+            under_ud_odds = None
+
+        best_bet = None
+        best_odds = None
+        edge = None
+
+        # Evaluate DK signal
+        if dk_odds is not None:
+            direction = r['dk_label'].upper() if pd.notna(r['dk_label']) else None
+            if direction in ("OVER", "UNDER"):
+                best_bet = direction
+                best_odds = dk_odds
+
+        # Evaluate UD signals
+        if over_ud_odds is not None:
+            if best_odds is None or abs(over_ud_odds) > abs(best_odds):
+                best_bet = "OVER"
+                best_odds = over_ud_odds
+
+        if under_ud_odds is not None:
+            if best_odds is None or abs(under_ud_odds) > abs(best_odds):
+                best_bet = "UNDER"
+                best_odds = under_ud_odds
+
+        # Final edge calculation
+        if best_odds is not None:
+            prob = odds_to_prob(best_odds)
+            if prob is not None:
+                edge = prob - 0.5
+
+        edges['best_bet'] = best_bet
+        edges['edge'] = edge
         return pd.Series(edges)
+
+
 
     df[['best_bet', 'edge']] = df.apply(pick_edge, axis=1)
     df['avg_line'] = df.apply(
@@ -116,22 +148,18 @@ def main():
     today = date.today().isoformat()
     slate = load_slate(today)
 
-    # Get top stat-based picks
     stat5 = get_top_stat(slate, n=5)
 
-    # Run model directly (no save/load)
     model_preds = predict_strikeouts(f"data/mlb_slates/mlb_pitcher_slate_{today}.csv")
     print(model_preds)
     model_preds['player_norm'] = model_preds['player_pp'].apply(normalize_name)
     model5 = get_top_model(slate, model_preds, n=5)
 
-    # Divider row
     divider = pd.DataFrame([{
         'Player': '─── MODEL PICKS ───', 'Team': '', 'Line (PP)': '',
         'Pick': '', 'Average Odds': '', 'Edge': '', 'Source': ''
     }])
 
-    # Output
     out = pd.concat([stat5, divider, model5], ignore_index=True)
     os.makedirs("best_lines", exist_ok=True)
     out.to_csv(f"best_lines/best_lines_{today}.csv", index=False)
