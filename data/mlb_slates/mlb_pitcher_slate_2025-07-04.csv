@@ -1,0 +1,20 @@
+player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_odds_ud,under_odds_ud,Actual_SO,Result
+Adrian Houser,CWS,Pitcher Strikeouts,4.0,3.5,−170,Over,4.5,119.0,-159.0,6.0,HIT
+Antonio Senzatela,COL,Pitcher Strikeouts,2.5,2.5,−135,Over,2.5,-137.0,104.0,4.0,HIT
+Bailey Falter,PIT,Pitcher Strikeouts,3.5,3.5,−130,Over,3.5,-129.0,-104.0,4.0,HIT
+Ben Casparius,LAD,Pitcher Strikeouts,4.0,3.5,−160,Over,3.5,-150.0,113.0,3.0,MISS
+Bryan Woo,SEA,Pitcher Strikeouts,6.0,6.5,−145,Under,6.5,123.0,-164.0,8.0,MISS
+Charlie Morton,BAL,Pitcher Strikeouts,5.0,4.5,−150,Over,4.5,-136.0,103.0,7.0,HIT
+Eduardo Rodriguez,AZ,Pitcher Strikeouts,5.0,4.5,−145,Over,4.5,-150.0,112.0,,
+Eric Lauer,TOR,Pitcher Strikeouts,5.0,5.5,−160,Under,5.5,109.0,-145.0,6.0,MISS
+JP Sears,ATH,Pitcher Strikeouts,4.5,4.5,−135,Under,4.5,-115.0,-115.0,6.0,MISS
+Justin Verlander,SF,Pitcher Strikeouts,5.0,4.5,−140,Over,4.5,-152.0,115.0,5.0,PUSH
+Kris Bubic,KC,Pitcher Strikeouts,5.0,5.5,−145,Under,5.5,111.0,-148.0,6.0,MISS
+Kumar Rocker,TEX,Pitcher Strikeouts,4.0,4.5,−170,Under,4.5,125.0,-167.0,4.0,PUSH
+Lance McCullers Jr.,HOU,Pitcher Strikeouts,4.0,4.5,−150,Under,4.5,127.0,-170.0,4.0,PUSH
+Quinn Priester,MIL,Pitcher Strikeouts,4.0,4.5,−165,Under,,,,4.0,PUSH
+Randy Vásquez,SD,Pitcher Strikeouts,3.0,3.5,−155,Under,3.5,119.0,-159.0,,
+Sandy Alcantara,MIA,Pitcher Strikeouts,4.0,4.5,−145,Under,4.5,110.0,-145.0,4.0,PUSH
+Slade Cecconi,CLE,Pitcher Strikeouts,4.5,4.5,−135,Over,4.5,-130.0,-103.0,5.0,HIT
+Spencer Strider,ATL,Pitcher Strikeouts,7.5,7.5,−125,Over,7.5,-145.0,109.0,6.0,MISS
+Zack Littell,TB,Pitcher Strikeouts,4.0,4.5,−165,Under,4.5,129.0,-173.0,5.0,MISS

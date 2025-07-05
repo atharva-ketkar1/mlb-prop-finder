@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks,Actual_SO,Result
+Adrian Houser,CWS,4.0,3.5,4.5,OVER,-170.0,13.0%,Stat,,6.0,HIT
+Kumar Rocker,TEX,4.0,4.5,4.5,UNDER,-170.0,13.0%,Stat,,4.0,PUSH
+Quinn Priester,MIL,4.0,4.5,,UNDER,-165.0,12.3%,Stat,,4.0,PUSH
+Zack Littell,TB,4.0,4.5,4.5,UNDER,-165.0,12.3%,Stat,,5.0,MISS
+Ben Casparius,LAD,4.0,3.5,3.5,OVER,-160.0,11.5%,Stat,,3.0,MISS
+─── MODEL PICKS ───,,,,,,,,,,,
+Quinn Priester,MIL,4.0,,,OVER,-165.0,1.76,Model,5.76,4.0,PUSH
+Randy Vásquez,SD,3.0,,,OVER,-155.0,1.36,Model,4.36,,
+Kumar Rocker,TEX,4.0,,,OVER,-170.0,1.12,Model,5.12,4.0,PUSH
+Charlie Morton,BAL,5.0,,,OVER,-150.0,1.04,Model,6.04,7.0,HIT
+Bryan Woo,SEA,6.0,,,OVER,-145.0,0.57,Model,6.57,8.0,HIT

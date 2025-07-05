@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
+Casey Mize,DET,4.0,4.5,4.5,UNDER,-164,12.5%,Stat,
+Framber Valdez,HOU,5.0,5.5,4.5,UNDER,-22,12.3%,Stat,
+Stephen Kolek,SD,4.0,3.5,4.5,OVER,-21,12.3%,Stat,
+Chad Patrick,MIL,5.0,4.5,5.5,UNDER,-154,11.8%,Stat,
+Jonathan Cannon,CWS,4.0,3.5,3.5,OVER,-157,11.4%,Stat,
+─── MODEL PICKS ───,,,,,,,,,
+Aaron Bummer,ATL,1.5,,,OVER,-126,2.64,Model,4.14
+Framber Valdez,HOU,5.0,,,OVER,-162,2.02,Model,7.02
+Chad Patrick,MIL,5.0,,,OVER,-12,1.87,Model,6.87
+Patrick Corbin,TEX,3.5,,,OVER,-122,1.16,Model,4.66
+Ryne Nelson,AZ,4.0,,,OVER,-136,1.05,Model,5.05
