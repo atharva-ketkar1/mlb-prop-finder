@@ -4,14 +4,8 @@ import re
 from datetime import datetime
 from glob import glob
 from pybaseball import pitching_stats_range
+from find_best_lines import normalize_name
 
-def normalize_name(name):
-    if pd.isna(name):
-        return ""
-    n = name.lower().strip()
-    n = re.sub(r"\b(jr|sr|ii|iii|iv|v)\b\.?", "", n)
-    n = re.sub(r"\s*\([^)]*\)", "", n)
-    return re.sub(r"\s+", " ", n).strip()
 
 def fetch_actual_stats(slate_date):
     try:
