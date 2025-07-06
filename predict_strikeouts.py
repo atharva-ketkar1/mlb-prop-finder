@@ -12,6 +12,8 @@ def normalize_name(name: str) -> str:
     n = re.sub(r"\s*\([^)]*\)", "", n)
     return re.sub(r"\s+", " ", n).strip()
 
+
+
 def build_agg_pitcher_stats(logs):
     logs = logs[logs['GS'] > 0].copy()
     logs['player_norm'] = logs['Name'].apply(normalize_name)

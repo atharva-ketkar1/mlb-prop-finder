@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
+Anthony DeSclafani,AZ,3.0,2.5,2.5,OVER,-167,13.0%,Stat,
+Emmet Sheehan,LAD,5.0,5.5,4.5,UNDER,-26,12.3%,Stat,
+Jacob Lopez,ATH,5.0,5.5,5.5,UNDER,-154,11.1%,Stat,
+George Kirby,SEA,6.0,5.5,5.5,OVER,-150,10.6%,Stat,
+Matthew Boyd,CHC,5.0,5.5,5.5,UNDER,-150,10.6%,Stat,
+─── MODEL PICKS ───,,,,,,,,,
+Ryan Gusto,HOU,4.0,,,OVER,-17,2.5,Model,6.5
+Anthony DeSclafani,AZ,3.0,,,OVER,-167,1.41,Model,4.41
+Jacob Lopez,ATH,5.0,,,OVER,-16,0.99,Model,5.99
+Michael Lorenzen,KC,4.0,,,OVER,-131,0.75,Model,4.75
+Emmet Sheehan,LAD,5.0,,,OVER,-158,0.15,Model,5.15

@@ -1,0 +1,9 @@
+player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_odds_ud,under_odds_ud
+Anthony DeSclafani,AZ,Pitcher Strikeouts,3.0,2.5,−170,Over,2.5,-164,+123
+Emmet Sheehan,LAD,Pitcher Strikeouts,5.0,5.5,−165,Under,4.5,-152,+114
+George Kirby,SEA,Pitcher Strikeouts,6.0,5.5,−145,Over,5.5,-154,+115
+Jacob Lopez,ATH,Pitcher Strikeouts,5.0,5.5,−150,Under,5.5,+117,-157
+Matthew Boyd,CHC,Pitcher Strikeouts,5.0,5.5,−145,Under,5.5,+115,-154
+Michael Lorenzen,KC,Pitcher Strikeouts,4.0,3.5,−130,Over,3.5,-132,+100
+Paul Skenes,PIT,Pitcher Strikeouts,7.5,7.5,−135,Under,7.5,+100,-132
+Ryan Gusto,HOU,Pitcher Strikeouts,4.0,4.5,−145,Under,4.5,+111,-148
