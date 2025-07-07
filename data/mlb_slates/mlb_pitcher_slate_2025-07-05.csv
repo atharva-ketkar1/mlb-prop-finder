@@ -2,11 +2,11 @@ player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_o
 Aaron Bummer,ATL,Pitcher Strikeouts,1.5,1.5,−115,Over,1.5,-136,102,5.0,HIT
 Casey Mize,DET,Pitcher Strikeouts,4.0,4.5,−160,Under,4.5,125,-167,4.0,PUSH
 Cal Quantrill,MIA,Pitcher Strikeouts,3.0,3.5,−155,Under,3.5,110,-145,6.0,MISS
-Carlos Rodón,NYY,Pitcher Strikeouts,6.0,5.5,−155,Over,5.5,-152,114,,
+Carlos Rodón,NYY,Pitcher Strikeouts,6.0,5.5,−155,Over,5.5,-152,114,4.0, MISS
 Chad Patrick,MIL,Pitcher Strikeouts,5.0,4.5,−145,Over,5.5,122,-162,2.0,MISS
 Frankie Montas,NYM,Pitcher Strikeouts,5.0,5.5,−150,Under,5.5,117,-157,2.0,HIT
 Framber Valdez,HOU,Pitcher Strikeouts,5.0,5.5,−165,Under,4.5,-159,120,7.0,MISS
-Germán Márquez,COL,Pitcher Strikeouts,4.0,3.5,−140,Over,3.5,-154,116,,
+Germán Márquez,COL,Pitcher Strikeouts,4.0,3.5,−140,Over,3.5,-154,116,2.0,MISS
 Jonathan Cannon,CWS,Pitcher Strikeouts,4.0,3.5,−155,Over,3.5,-159,119,1.0,MISS
 Logan Allen,CLE,Pitcher Strikeouts,4.0,4.5,−150,Under,4.5,118,-157,5.0,MISS
 Logan Webb,SF,Pitcher Strikeouts,7.0,6.5,−155,Over,6.5,-139,105,6.0,MISS
@@ -16,7 +16,7 @@ Mitchell Parker,WSH,Pitcher Strikeouts,4.5,4.5,−125,Over,4.5,-115,-115,4.0,MIS
 Michael Wacha,KC,Pitcher Strikeouts,4.5,4.5,−120,Under,4.5,113,-150,4.0,HIT
 Nick Lodolo,CIN,Pitcher Strikeouts,5.0,5.5,−150,Under,5.5,108,-143,8.0,MISS
 Patrick Corbin,TEX,Pitcher Strikeouts,3.5,3.5,−130,Over,3.5,-114,-115,3.0,MISS
-Ranger Suárez,PHI,Pitcher Strikeouts,6.0,5.5,−145,Over,5.5,-152,115,,
+Ranger Suárez,PHI,Pitcher Strikeouts,6.0,5.5,−145,Over,5.5,-152,115,6.0,PUSH
 Ryne Nelson,AZ,Pitcher Strikeouts,4.0,3.5,−140,Over,3.5,-132,100,5.0,HIT
 Stephen Kolek,SD,Pitcher Strikeouts,4.0,3.5,−165,Over,4.5,123,-164,2.0,MISS
 Walker Buehler,BOS,Pitcher Strikeouts,3.5,3.5,−120,Over,3.5,-130,-103,2.0,MISS
