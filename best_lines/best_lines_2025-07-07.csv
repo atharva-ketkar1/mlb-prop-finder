@@ -1,12 +1,12 @@
-Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
-Sean Burke,CWS,4.0,3.5,4.5,UNDER,-168,17.2%,Stat,
-Yu Darvish,SD,4.0,3.5,3.5,OVER,-167,14.2%,Stat,
-Colton Gordon,HOU,4.0,3.5,4.5,UNDER,-172,13.4%,Stat,
-Tanner Bibee,CLE,5.5,5.5,5.5,UNDER,-152,13.4%,Stat,
-Yusei Kikuchi,LAA,6.0,6.5,6.5,UNDER,-168,13.0%,Stat,
-─── MODEL PICKS ───,,,,,,,,,
-Shane Baz,TB,5.0,,,OVER,-122,2.16,Model,7.16
-Yusei Kikuchi,LAA,6.0,,,OVER,-25,2.09,Model,8.09
-Keider Montero,DET,3.0,,,OVER,-14,1.46,Model,4.46
-Sean Burke,CWS,4.0,,,OVER,+3,1.4,Model,5.4
-Andrew Heaney,PIT,3.5,,,OVER,-120,1.28,Model,4.78
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks,Actual_SO,Result
+Sean Burke,CWS,4.0,3.5,4.5,UNDER,-168.0,17.2%,Stat,,2.0,HIT
+Yu Darvish,SD,4.0,3.5,3.5,OVER,-167.0,14.2%,Stat,,5.0,HIT
+Colton Gordon,HOU,4.0,3.5,4.5,UNDER,-172.0,13.4%,Stat,,2.0,HIT
+Tanner Bibee,CLE,5.5,5.5,5.5,UNDER,-152.0,13.4%,Stat,,3.0,HIT
+Yusei Kikuchi,LAA,6.0,6.5,6.5,UNDER,-168.0,13.0%,Stat,,4.0,HIT
+─── MODEL PICKS ───,,,,,,,,,,,
+Shane Baz,TB,5.0,,,OVER,-122.0,2.16,Model,7.16,7.0,HIT
+Yusei Kikuchi,LAA,6.0,,,OVER,-25.0,2.09,Model,8.09,4.0,MISS
+Keider Montero,DET,3.0,,,OVER,-14.0,1.46,Model,4.46,4.0,HIT
+Sean Burke,CWS,4.0,,,OVER,3.0,1.4,Model,5.4,2.0,MISS
+Andrew Heaney,PIT,3.5,,,OVER,-120.0,1.28,Model,4.78,2.0,MISS
