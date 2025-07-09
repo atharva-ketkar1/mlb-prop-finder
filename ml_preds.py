@@ -1,16 +1,15 @@
 from pybaseball import statcast, pitching_stats_range, statcast_pitcher, pitching_stats
-import pybaseball
-import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
-import seaborn as sns
 from datetime import datetime, timedelta
 import pandas as pd
 import re
 import unicodedata
+import os
+from xgboost import XGBRegressor
 
 def fix_escaped_unicode(text):
     if pd.isna(text):
@@ -19,8 +18,6 @@ def fix_escaped_unicode(text):
         return bytes(text, "utf-8").decode("unicode_escape").encode("latin1").decode("utf-8")
     except Exception:
         return text
-
-
 
 def normalize_name(name: str) -> str:
     if pd.isna(name):
@@ -50,7 +47,7 @@ def prepare_data():
     df['SO_per_IP'] = df['SO'] / df['IP']
     df['K_BB_ratio'] = df['SO'] / df['BB'].replace(0, np.nan)
 
-    features = ['Age', 'IP', 'SO9', 'ERA', 'WHIP', 'K_BB_ratio', 'SO_per_IP']
+    features = ['Age', 'IP', 'SO9', 'ERA', 'WHIP', 'K_BB_ratio', 'SO_per_IP', 'GS', 'Pit', 'AB', 'BF']
     df['SO_per_game'] = df['SO'] / df['G'].replace(0, np.nan)
     target = 'SO_per_game'
 
@@ -61,12 +58,7 @@ def prepare_data():
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    model = RandomForestRegressor(n_estimators=100, random_state=42)
-    model.fit(X_train, y_train)
-
-    df = df.dropna(subset=features)
-    
-    return X, y
+    return X_train, X_test, y_train, y_test, features
 
 def predict_today(model):
     curr_date = datetime.today().strftime('%Y-%m-%d')
@@ -84,13 +76,14 @@ def predict_today(model):
 
     df_today['SO_per_IP'] = df_today['SO'] / df_today['IP'].replace(0, np.nan)
     df_today['K_BB_ratio'] = df_today['SO'] / df_today['BB'].replace(0, np.nan)
-    df_today = df_today.replace([np.inf, -np.inf], np.nan).dropna(subset=['Age', 'IP', 'SO9', 'ERA', 'WHIP', 'K_BB_ratio', 'SO_per_IP'])
+    df_today = df_today.replace([np.inf, -np.inf], np.nan).dropna(subset=['Age', 'IP', 'SO9', 'ERA', 'WHIP', 'K_BB_ratio', 'SO_per_IP', 'GS', 'Pit', 'AB', 'BF'])
 
-    features = ['Age', 'IP', 'SO9', 'ERA', 'WHIP', 'K_BB_ratio', 'SO_per_IP']
+    features = ['Age', 'IP', 'SO9', 'ERA', 'WHIP', 'K_BB_ratio', 'SO_per_IP', 'GS', 'Pit', 'AB', 'BF']
     df_today['SO_pred'] = model.predict(df_today[features])
 
     df_final = pd.merge(df_props, df_today[['Name', 'SO_pred']], on='Name', how='left')
 
+    df_final['date'] = curr_date
     df_final['edge'] = df_final['SO_pred'] - df_final['prizepicks_line']
     df_final['recommendation'] = df_final['edge'].apply(lambda x: 'OVER' if x > 0.5 else ('UNDER' if x < -0.5 else 'NO BET'))
     df_final['abs_edge'] = df_final['edge'].abs()
@@ -98,13 +91,41 @@ def predict_today(model):
 
     print(df_final[['player_pp', 'SO_pred', 'prizepicks_line', 'edge', 'recommendation']])
     
-
+    cols = ['date','player_pp', 'SO_pred', 'prizepicks_line', 'edge', 'recommendation']
+    df_final = df_final[cols].copy()
+    save_predictions(df_final, curr_date)
     
+def save_predictions(df, date):
+    history_path = 'best_lines_ml/mlb_preds_history.csv'
+    df['date'] = date
+    df = df[df['recommendation'] != 'NO BET'].copy()
+
+    separator = pd.DataFrame([['---'] * len(df.columns)], columns=df.columns)
+
+
+    if os.path.exists(history_path):
+        existing = pd.read_csv(history_path)
+        combined = pd.concat([existing, separator, df], ignore_index=True)
+        combined.to_csv(history_path, index=False)
+    else:
+        df.to_csv(history_path, index=False)
+
 if __name__ == "__main__":
     save_pitching_stats()
-    X, y = prepare_data()
     
-    model = RandomForestRegressor(n_estimators=100, random_state=42)
-    model.fit(X, y)
+    X_train, X_test, y_train, y_test, features = prepare_data()
+    
+    #model = RandomForestRegressor(n_estimators=100, random_state=42)
+    model = XGBRegressor(n_estimators=100, learning_rate=0.05)
+
+    model.fit(X_train, y_train)
+    
+    y_pred = model.predict(X_test)
+    print("Test R²:", r2_score(y_test, y_pred))
+    print("Test MSE:", mean_squared_error(y_test, y_pred))
     
     predict_today(model)
+    
+    #Results right now
+    #Test R²: 0.9199029533044669 , pretty good
+    #Test MSE: 0.26693755185171036 , also pretty good for now

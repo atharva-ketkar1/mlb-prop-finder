@@ -151,7 +151,7 @@ def main():
     stat5 = get_top_stat(slate, n=5)
 
     model_preds = predict_strikeouts(f"data/mlb_slates/mlb_pitcher_slate_{today}.csv")
-    print(model_preds)
+    #print(model_preds)
     model_preds['player_norm'] = model_preds['player_pp'].apply(normalize_name)
     model5 = get_top_model(slate, model_preds, n=5)
 

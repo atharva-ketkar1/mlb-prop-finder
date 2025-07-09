@@ -1,12 +1,12 @@
-Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
-Simeon Woods Richardson,MIN,4.0,3.5,3.5,OVER,-164,12.5%,Stat,
-Brayan Bello,BOS,5.0,5.5,5.5,UNDER,-154,12.1%,Stat,
-Hunter Brown,HOU,7.0,6.5,6.5,OVER,-150,12.1%,Stat,
-Mitch Keller,PIT,4.0,4.5,4.5,UNDER,-162,12.1%,Stat,
-Clayton Kershaw,LAD,4.0,3.5,4.5,UNDER,-151,11.8%,Stat,
-─── MODEL PICKS ───,,,,,,,,,
-Merrill Kelly,AZ,4.5,,,OVER,-116,1.8,Model,6.3
-Ryan Pepiot,TB,5.5,,,OVER,-125,1.74,Model,7.24
-Jake Irvin,WSH,3.5,,,OVER,-120,1.44,Model,4.94
-Hunter Brown,HOU,7.0,,,OVER,-150,0.97,Model,7.97
-Clayton Kershaw,LAD,4.0,,,OVER,-10,0.82,Model,4.82
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks,Actual_SO,Result
+Simeon Woods Richardson,MIN,4.0,3.5,3.5,OVER,-164.0,12.5%,Stat,,4.0,PUSH
+Brayan Bello,BOS,5.0,5.5,5.5,UNDER,-154.0,12.1%,Stat,,10.0,MISS
+Hunter Brown,HOU,7.0,6.5,6.5,OVER,-150.0,12.1%,Stat,,3.0,MISS
+Mitch Keller,PIT,4.0,4.5,4.5,UNDER,-162.0,12.1%,Stat,,5.0,MISS
+Clayton Kershaw,LAD,4.0,3.5,4.5,UNDER,-151.0,11.8%,Stat,,3.0,HIT
+─── MODEL PICKS ───,,,,,,,,,,,
+Merrill Kelly,AZ,4.5,,,OVER,-116.0,1.8,Model,6.3,4.0,MISS
+Ryan Pepiot,TB,5.5,,,OVER,-125.0,1.74,Model,7.24,6.0,HIT
+Jake Irvin,WSH,3.5,,,OVER,-120.0,1.44,Model,4.94,3.0,MISS
+Hunter Brown,HOU,7.0,,,OVER,-150.0,0.97,Model,7.97,3.0,MISS
+Clayton Kershaw,LAD,4.0,,,OVER,-10.0,0.82,Model,4.82,3.0,MISS
