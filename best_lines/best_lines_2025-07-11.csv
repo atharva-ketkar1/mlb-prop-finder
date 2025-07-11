@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
+Luis Severino,ATH,3.0,3.5,3.5,UNDER,-168,14.3%,Stat,
+Hunter Dobbins,BOS,3.0,3.5,3.5,UNDER,-172,14.2%,Stat,
+Lance McCullers Jr.,HOU,5.0,5.5,5.5,UNDER,-164,12.5%,Stat,
+Ryne Nelson,AZ,5.0,4.5,5.5,UNDER,-164,12.5%,Stat,
+Tyler Anderson,LAA,4.0,4.5,4.5,UNDER,-164,12.3%,Stat,
+─── MODEL PICKS ───,,,,,,,,,
+Grant Holmes,ATL,5.0,,,OVER,-21,2.85,Model,7.85
+Michael Wacha,KC,4.0,,,OVER,-18,0.68,Model,4.68
+Logan Webb,SF,5.5,,,OVER,-119,0.67,Model,6.17
+Ryan Bergert,SD,3.5,,,OVER,-114,0.56,Model,4.06
+Paul Skenes,PIT,6.5,,,OVER,-135,0.4,Model,6.9

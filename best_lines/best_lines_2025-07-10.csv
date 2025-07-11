@@ -1,12 +1,12 @@
-Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
-Tomoyuki Sugano,BAL,3.0,2.5,3.5,UNDER,-173,13.8%,Stat,
-Randy Vásquez,SD,3.0,2.5,2.5,OVER,-166,13.6%,Stat,
-Walker Buehler,BOS,4.0,3.5,3.5,OVER,-156,13.4%,Stat,
-JP Sears,ATH,4.0,3.5,4.5,UNDER,-168,13.0%,Stat,
-Miles Mikolas,STL,3.0,3.5,3.5,UNDER,-160,13.0%,Stat,
-─── MODEL PICKS ───,,,,,,,,,
-Miles Mikolas,STL,3.0,,,OVER,-13,1.76,Model,4.76
-Bryan Woo,SEA,5.5,,,OVER,-134,1.47,Model,6.97
-Randy Vásquez,SD,3.0,,,OVER,-166,1.37,Model,4.37
-Patrick Corbin,TEX,4.0,,,OVER,-20,0.94,Model,4.94
-JP Sears,ATH,4.0,,,OVER,-20,0.85,Model,4.85
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks,Actual_SO,Result
+Tomoyuki Sugano,BAL,3.0,2.5,3.5,UNDER,-173.0,13.8%,Stat,,2.0,HIT
+Randy Vásquez,SD,3.0,2.5,2.5,OVER,-166.0,13.6%,Stat,,,
+Walker Buehler,BOS,4.0,3.5,3.5,OVER,-156.0,13.4%,Stat,,2.0,MISS
+JP Sears,ATH,4.0,3.5,4.5,UNDER,-168.0,13.0%,Stat,,6.0,MISS
+Miles Mikolas,STL,3.0,3.5,3.5,UNDER,-160.0,13.0%,Stat,,6.0,MISS
+─── MODEL PICKS ───,,,,,,,,,,,
+Miles Mikolas,STL,3.0,,,OVER,-13.0,1.76,Model,4.76,6.0,HIT
+Bryan Woo,SEA,5.5,,,OVER,-134.0,1.47,Model,6.97,5.0,MISS
+Randy Vásquez,SD,3.0,,,OVER,-166.0,1.37,Model,4.37,,
+Patrick Corbin,TEX,4.0,,,OVER,-20.0,0.94,Model,4.94,6.0,HIT
+JP Sears,ATH,4.0,,,OVER,-20.0,0.85,Model,4.85,6.0,HIT

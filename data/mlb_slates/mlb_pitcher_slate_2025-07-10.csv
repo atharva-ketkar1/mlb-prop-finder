@@ -1,17 +1,17 @@
-player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_odds_ud,under_odds_ud
-Bryan Woo,SEA,Pitcher Strikeouts,5.5,5.5,−135,Over,5.5,-134,-102
-Cal Quantrill,MIA,Pitcher Strikeouts,4.0,3.5,−150,Over,3.5,-145,+107
-Eduardo Rodriguez,AZ,Pitcher Strikeouts,4.5,4.5,−135,Under,4.5,-104,-132
-Jack Kochanowicz,LAA,Pitcher Strikeouts,3.5,3.5,−130,Under,3.5,+100,-136
-Jonathan Cannon,CWS,Pitcher Strikeouts,3.5,3.5,−115,Over,3.5,-124,-110
-JP Sears,ATH,Pitcher Strikeouts,4.0,3.5,−165,Over,4.5,+125,-170
-Logan Allen,CLE,Pitcher Strikeouts,4.5,4.5,−130,Over,4.5,-134,-102
-Marcus Stroman,NYY,Pitcher Strikeouts,3.5,3.5,−115,Under,3.5,-125,-109
-Miles Mikolas,STL,Pitcher Strikeouts,3.0,3.5,−150,Under,3.5,+124,-170
-Nick Lodolo,CIN,Pitcher Strikeouts,5.5,5.5,−120,Over,5.5,-124,-109
-Patrick Corbin,TEX,Pitcher Strikeouts,4.0,4.5,−145,Under,4.5,+105,-141
-Randy Vásquez,SD,Pitcher Strikeouts,3.0,2.5,−175,Over,2.5,-157,+116
-Spencer Strider,ATL,Pitcher Strikeouts,8.0,7.5,−135,Over,7.5,-148,+109
-Taj Bradley,TB,Pitcher Strikeouts,5.0,5.5,−135,Under,5.5,+112,-152
-Tomoyuki Sugano,BAL,Pitcher Strikeouts,3.0,2.5,−170,Over,3.5,+129,-176
-Walker Buehler,BOS,Pitcher Strikeouts,4.0,3.5,−140,Over,3.5,-173,+128
+player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_odds_ud,under_odds_ud,Actual_SO,Result
+Bryan Woo,SEA,Pitcher Strikeouts,5.5,5.5,−135,Over,5.5,-134,-102,5.0,MISS
+Cal Quantrill,MIA,Pitcher Strikeouts,4.0,3.5,−150,Over,3.5,-145,107,5.0,HIT
+Eduardo Rodriguez,AZ,Pitcher Strikeouts,4.5,4.5,−135,Under,4.5,-104,-132,,
+Jack Kochanowicz,LAA,Pitcher Strikeouts,3.5,3.5,−130,Under,3.5,100,-136,3.0,HIT
+Jonathan Cannon,CWS,Pitcher Strikeouts,3.5,3.5,−115,Over,3.5,-124,-110,,
+JP Sears,ATH,Pitcher Strikeouts,4.0,3.5,−165,Over,4.5,125,-170,6.0,HIT
+Logan Allen,CLE,Pitcher Strikeouts,4.5,4.5,−130,Over,4.5,-134,-102,,
+Marcus Stroman,NYY,Pitcher Strikeouts,3.5,3.5,−115,Under,3.5,-125,-109,3.0,HIT
+Miles Mikolas,STL,Pitcher Strikeouts,3.0,3.5,−150,Under,3.5,124,-170,6.0,MISS
+Nick Lodolo,CIN,Pitcher Strikeouts,5.5,5.5,−120,Over,5.5,-124,-109,4.0,MISS
+Patrick Corbin,TEX,Pitcher Strikeouts,4.0,4.5,−145,Under,4.5,105,-141,6.0,MISS
+Randy Vásquez,SD,Pitcher Strikeouts,3.0,2.5,−175,Over,2.5,-157,116,,
+Spencer Strider,ATL,Pitcher Strikeouts,8.0,7.5,−135,Over,7.5,-148,109,11.0,HIT
+Taj Bradley,TB,Pitcher Strikeouts,5.0,5.5,−135,Under,5.5,112,-152,5.0,PUSH
+Tomoyuki Sugano,BAL,Pitcher Strikeouts,3.0,2.5,−170,Over,3.5,129,-176,2.0,MISS
+Walker Buehler,BOS,Pitcher Strikeouts,4.0,3.5,−140,Over,3.5,-173,128,2.0,MISS
