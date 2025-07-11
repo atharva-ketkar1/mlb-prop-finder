@@ -9,7 +9,7 @@ import pandas as pd
 import re
 import unicodedata
 import os
-from xgboost import XGBRegressor
+from xgboost import XGBRegressor, plot_importance
 
 def fix_escaped_unicode(text):
     if pd.isna(text):
@@ -40,6 +40,11 @@ def save_pitching_stats():
 
 def prepare_data():
     df = pd.read_csv('data/pitcher_stats/pitching_stats_2023-2025.csv')
+    df_merge = pd.read_csv('data/pitcher_stats/pitcher_stats.csv')
+    df_merge[['last_name', 'first_name']] = df_merge["last_name, first_name"].str.split(",", expand=True)
+    df_merge['Name'] = (df_merge['first_name'].str.strip() + ' ' + df_merge['last_name'].str.strip()).apply(normalize_name)
+    df = pd.merge(df, df_merge, on='Name', how='inner')
+    df = df.drop(columns=['first_name', 'last_name', 'last_name, first_name'])
     
     df = df.replace([np.inf, -np.inf], np.nan)
     df = df.dropna(subset=['SO', 'IP', 'SO9', 'ERA', 'WHIP', 'BB'])
@@ -47,7 +52,7 @@ def prepare_data():
     df['SO_per_IP'] = df['SO'] / df['IP']
     df['K_BB_ratio'] = df['SO'] / df['BB'].replace(0, np.nan)
 
-    features = ['Age', 'IP', 'SO9', 'ERA', 'WHIP', 'K_BB_ratio', 'SO_per_IP', 'GS', 'Pit', 'AB', 'BF']
+    features = ['Age', '#days', 'SO9', 'K_BB_ratio', 'SO_per_IP', 'whiff_percent', 'barrel_batted_rate', 'GB/FB']
     df['SO_per_game'] = df['SO'] / df['G'].replace(0, np.nan)
     target = 'SO_per_game'
 
@@ -67,7 +72,11 @@ def predict_today(model):
     df_props['Name'] = df_props['player_pp'].apply(normalize_name)
 
     df_stats = pd.read_csv('data/pitcher_stats/pitching_stats_2023-2025.csv')
+    df_merge = pd.read_csv('data/pitcher_stats/pitcher_stats.csv')
 
+    df_merge[['last_name', 'first_name']] = df_merge["last_name, first_name"].str.split(",", expand=True)
+    df_merge['Name'] = (df_merge['first_name'].str.strip() + ' ' + df_merge['last_name'].str.strip()).apply(normalize_name)
+    df_stats = pd.merge(df_stats, df_merge, on='Name', how='inner')
 
     df_stats_sorted = df_stats.sort_values(by=['Name', '#days'])
     df_latest = df_stats_sorted.groupby('Name').first().reset_index()
@@ -76,9 +85,11 @@ def predict_today(model):
 
     df_today['SO_per_IP'] = df_today['SO'] / df_today['IP'].replace(0, np.nan)
     df_today['K_BB_ratio'] = df_today['SO'] / df_today['BB'].replace(0, np.nan)
-    df_today = df_today.replace([np.inf, -np.inf], np.nan).dropna(subset=['Age', 'IP', 'SO9', 'ERA', 'WHIP', 'K_BB_ratio', 'SO_per_IP', 'GS', 'Pit', 'AB', 'BF'])
+    df_today = df_today.replace([np.inf, -np.inf], np.nan).dropna(subset=['Age', '#days', 'SO9', 'K_BB_ratio', 'SO_per_IP', 'whiff_percent', 'barrel_batted_rate', 'GB/FB'])
 
-    features = ['Age', 'IP', 'SO9', 'ERA', 'WHIP', 'K_BB_ratio', 'SO_per_IP', 'GS', 'Pit', 'AB', 'BF']
+    #features = ['Age', 'IP', 'SO9', 'ERA', 'WHIP', 'K_BB_ratio', 'SO_per_IP', 'GS', 'Pit', 'AB', 'BF']
+    features = ['Age', '#days', 'SO9', 'K_BB_ratio', 'SO_per_IP', 'whiff_percent', 'barrel_batted_rate', 'GB/FB']
+
     df_today['SO_pred'] = model.predict(df_today[features])
 
     df_final = pd.merge(df_props, df_today[['Name', 'SO_pred']], on='Name', how='left')
@@ -126,6 +137,8 @@ if __name__ == "__main__":
     
     predict_today(model)
     
+    plot_importance(model, max_num_features=20)
+    plt.show()
     #Results right now
     #Test R²: 0.9199029533044669 , pretty good
     #Test MSE: 0.26693755185171036 , also pretty good for now

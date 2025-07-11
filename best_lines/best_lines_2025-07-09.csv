@@ -1,12 +1,12 @@
-Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
-Tomoyuki Sugano,BAL,3.0,2.5,3.5,OVER,-26,14.3%,Stat,
-Bryce Elder,ATL,5.0,4.5,4.5,OVER,-160,13.0%,Stat,
-Antonio Senzatela,COL,3.0,2.5,3.5,UNDER,-166,12.5%,Stat,
-Mitch Spence,ATH,4.0,3.5,3.5,OVER,-154,12.1%,Stat,
-Jesús Luzardo,PHI,6.0,5.5,5.5,OVER,-157,11.5%,Stat,
-─── MODEL PICKS ───,,,,,,,,,
-Brandon Pfaadt,AZ,4.5,,,OVER,-12,1.19,Model,5.69
-Slade Cecconi,CLE,4.5,,,OVER,-136,0.94,Model,5.44
-Zack Littell,TB,4.0,,,OVER,-23,0.76,Model,4.76
-Tomoyuki Sugano,BAL,3.0,,,OVER,-26,0.71,Model,3.71
-Kyle Hendricks,LAA,3.5,,,OVER,-124,0.67,Model,4.17
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks,Actual_SO,Result
+Tomoyuki Sugano,BAL,3.0,2.5,3.5,OVER,-26.0,14.3%,Stat,,,
+Bryce Elder,ATL,5.0,4.5,4.5,OVER,-160.0,13.0%,Stat,,7.0,HIT
+Antonio Senzatela,COL,3.0,2.5,3.5,UNDER,-166.0,12.5%,Stat,,3.0,PUSH
+Mitch Spence,ATH,4.0,3.5,3.5,OVER,-154.0,12.1%,Stat,,3.0,MISS
+Jesús Luzardo,PHI,6.0,5.5,5.5,OVER,-157.0,11.5%,Stat,,,
+─── MODEL PICKS ───,,,,,,,,,,,
+Brandon Pfaadt,AZ,4.5,,,OVER,-12.0,1.19,Model,5.69,4.0,MISS
+Slade Cecconi,CLE,4.5,,,OVER,-136.0,0.94,Model,5.44,9.0,HIT
+Zack Littell,TB,4.0,,,OVER,-23.0,0.76,Model,4.76,4.0,PUSH
+Tomoyuki Sugano,BAL,3.0,,,OVER,-26.0,0.71,Model,3.71,,
+Kyle Hendricks,LAA,3.5,,,OVER,-124.0,0.67,Model,4.17,3.0,MISS
