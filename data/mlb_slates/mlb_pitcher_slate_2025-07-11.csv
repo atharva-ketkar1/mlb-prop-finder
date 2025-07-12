@@ -1,25 +1,25 @@
-player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_odds_ud,under_odds_ud
-Carlos Rodón,NYY,Pitcher Strikeouts,5.5,5.5,−135,Over,5.5,-136,+100
-Chase Burns,CIN,Pitcher Strikeouts,7.0,6.5,−150,Over,6.5,-143,+106
-Dustin May,LAD,Pitcher Strikeouts,4.5,4.5,−135,Over,4.5,-115,-115
-Edward Cabrera,MIA,Pitcher Strikeouts,5.5,5.5,−120,Under,5.5,-124,-110
-Germán Márquez,COL,Pitcher Strikeouts,4.5,4.5,−130,Under,4.5,-106,-129
-Grant Holmes,ATL,Pitcher Strikeouts,5.0,5.5,−150,Under,5.5,+108,-145
-Hunter Dobbins,BOS,Pitcher Strikeouts,3.0,3.5,−165,Under,3.5,+132,-179
-Jack Leiter,TEX,Pitcher Strikeouts,4.5,4.5,−115,Over,4.5,-117,-115
-Joe Ryan,MIN,Pitcher Strikeouts,7.0,6.5,−145,Over,6.5,-141,+104
-Kodai Senga,NYM,Pitcher Strikeouts,4.5,4.5,−130,Under,4.5,+105,-141
-Lance McCullers Jr.,HOU,Pitcher Strikeouts,5.0,5.5,−160,Under,5.5,+123,-167
-Logan Webb,SF,Pitcher Strikeouts,5.5,5.5,−120,Over,5.5,-118,-115
-Luis Castillo,SEA,Pitcher Strikeouts,5.0,5.5,−145,Under,5.5,+118,-159
-Luis Severino,ATH,Pitcher Strikeouts,3.0,3.5,−180,Under,3.5,+116,-157
-Matthew Liberatore,STL,Pitcher Strikeouts,4.0,4.5,−150,Under,4.5,+119,-162
-Max Scherzer,TOR,Pitcher Strikeouts,6.0,5.5,−145,Over,5.5,-157,+115
-Mitchell Parker,WSH,Pitcher Strikeouts,3.5,3.5,−125,Over,3.5,-134,-103
-Michael Wacha,KC,Pitcher Strikeouts,4.0,4.5,−145,Under,4.5,+110,-148
-Paul Skenes,PIT,Pitcher Strikeouts,6.5,6.5,−125,Over,6.5,-145,+108
-Ranger Suárez,PHI,Pitcher Strikeouts,4.5,4.5,−125,Under,4.5,+108,-145
-Ryan Bergert,SD,Pitcher Strikeouts,3.5,3.5,−120,Under,3.5,-108,-125
-Ryne Nelson,AZ,Pitcher Strikeouts,5.0,4.5,−160,Over,5.5,+124,-167
-Tarik Skubal,DET,Pitcher Strikeouts,8.0,8.5,−125,Under,8.5,+113,-152
-Tyler Anderson,LAA,Pitcher Strikeouts,4.0,4.5,−165,Under,4.5,+120,-162
+player_pp,team,stat_type,prizepicks_line,dk_line,dk_odds,dk_label,line_ud,over_odds_ud,under_odds_ud,Actual_SO,Result
+Carlos Rodón,NYY,Pitcher Strikeouts,5.5,5.5,−135,Over,5.5,-136,100,,
+Chase Burns,CIN,Pitcher Strikeouts,7.0,6.5,−150,Over,6.5,-143,106,10.0,HIT
+Dustin May,LAD,Pitcher Strikeouts,4.5,4.5,−135,Over,4.5,-115,-115,4.0,MISS
+Edward Cabrera,MIA,Pitcher Strikeouts,5.5,5.5,−120,Under,5.5,-124,-110,6.0,MISS
+Germán Márquez,COL,Pitcher Strikeouts,4.5,4.5,−130,Under,4.5,-106,-129,,
+Grant Holmes,ATL,Pitcher Strikeouts,5.0,5.5,−150,Under,5.5,108,-145,1.0,HIT
+Hunter Dobbins,BOS,Pitcher Strikeouts,3.0,3.5,−165,Under,3.5,132,-179,2.0,HIT
+Jack Leiter,TEX,Pitcher Strikeouts,4.5,4.5,−115,Over,4.5,-117,-115,6.0,HIT
+Joe Ryan,MIN,Pitcher Strikeouts,7.0,6.5,−145,Over,6.5,-141,104,5.0,MISS
+Kodai Senga,NYM,Pitcher Strikeouts,4.5,4.5,−130,Under,4.5,105,-141,4.0,HIT
+Lance McCullers Jr.,HOU,Pitcher Strikeouts,5.0,5.5,−160,Under,5.5,123,-167,5.0,PUSH
+Logan Webb,SF,Pitcher Strikeouts,5.5,5.5,−120,Over,5.5,-118,-115,6.0,HIT
+Luis Castillo,SEA,Pitcher Strikeouts,5.0,5.5,−145,Under,5.5,118,-159,6.0,MISS
+Luis Severino,ATH,Pitcher Strikeouts,3.0,3.5,−180,Under,3.5,116,-157,8.0,MISS
+Matthew Liberatore,STL,Pitcher Strikeouts,4.0,4.5,−150,Under,4.5,119,-162,0.0,HIT
+Max Scherzer,TOR,Pitcher Strikeouts,6.0,5.5,−145,Over,5.5,-157,115,8.0,HIT
+Mitchell Parker,WSH,Pitcher Strikeouts,3.5,3.5,−125,Over,3.5,-134,-103,0.0,MISS
+Michael Wacha,KC,Pitcher Strikeouts,4.0,4.5,−145,Under,4.5,110,-148,5.0,MISS
+Paul Skenes,PIT,Pitcher Strikeouts,6.5,6.5,−125,Over,6.5,-145,108,6.0,MISS
+Ranger Suárez,PHI,Pitcher Strikeouts,4.5,4.5,−125,Under,4.5,108,-145,,
+Ryan Bergert,SD,Pitcher Strikeouts,3.5,3.5,−120,Under,3.5,-108,-125,7.0,MISS
+Ryne Nelson,AZ,Pitcher Strikeouts,5.0,4.5,−160,Over,5.5,124,-167,1.0,MISS
+Tarik Skubal,DET,Pitcher Strikeouts,8.0,8.5,−125,Under,8.5,113,-152,5.0,HIT
+Tyler Anderson,LAA,Pitcher Strikeouts,4.0,4.5,−165,Under,4.5,120,-162,3.0,HIT
