@@ -1,12 +1,12 @@
-Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
-Zac Gallen,AZ,6.0,5.5,5.5,OVER,-158,11.5%,Stat,
-Yu Darvish,SD,5.0,4.5,4.5,OVER,-148,11.1%,Stat,
-Jacob deGrom,TEX,6.0,6.5,6.5,UNDER,-144,9.7%,Stat,
-Zack Wheeler,PHI,6.5,6.5,6.5,UNDER,-124,7.3%,Stat,
-Framber Valdez,HOU,6.5,6.5,6.5,UNDER,-130,6.5%,Stat,
-─── MODEL PICKS ───,,,,,,,,,
-Yusei Kikuchi,LAA,5.5,,,OVER,-112,2.29,Model,7.79
-Zack Wheeler,PHI,6.5,,,OVER,-108,2.25,Model,8.75
-Jacob Lopez,ATH,4.5,,,OVER,-122,2.07,Model,6.57
-Zac Gallen,AZ,6.0,,,OVER,-158,0.29,Model,6.29
-Jacob deGrom,TEX,6.0,,,OVER,-16,0.23,Model,6.23
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks,Actual_SO,Result
+Zac Gallen,AZ,6.0,5.5,5.5,OVER,-158.0,11.5%,Stat,,3.0,MISS
+Yu Darvish,SD,5.0,4.5,4.5,OVER,-148.0,11.1%,Stat,,2.0,MISS
+Jacob deGrom,TEX,6.0,6.5,6.5,UNDER,-144.0,9.7%,Stat,,8.0,MISS
+Zack Wheeler,PHI,6.5,6.5,6.5,UNDER,-124.0,7.3%,Stat,,6.0,HIT
+Framber Valdez,HOU,6.5,6.5,6.5,UNDER,-130.0,6.5%,Stat,,10.0,MISS
+─── MODEL PICKS ───,,,,,,,,,,,
+Yusei Kikuchi,LAA,5.5,,,OVER,-112.0,2.29,Model,7.79,5.0,MISS
+Zack Wheeler,PHI,6.5,,,OVER,-108.0,2.25,Model,8.75,6.0,MISS
+Jacob Lopez,ATH,4.5,,,OVER,-122.0,2.07,Model,6.57,5.0,HIT
+Zac Gallen,AZ,6.0,,,OVER,-158.0,0.29,Model,6.29,3.0,MISS
+Jacob deGrom,TEX,6.0,,,OVER,-16.0,0.23,Model,6.23,8.0,HIT
