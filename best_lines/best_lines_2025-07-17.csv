@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
+Colin Rea,CHC,4.0,4.5,4.5,UNDER,-158,13.8%,Stat,
+Justin Verlander,SF,4.0,3.5,3.5,OVER,-172,13.4%,Stat,
+Dylan Cease,SD,6.0,5.5,5.5,OVER,-162,13.0%,Stat,
+Chris Bassitt,TOR,5.0,5.5,5.5,UNDER,-158,11.5%,Stat,
+Lucas Giolito,BOS,5.0,5.5,5.5,UNDER,-156,11.5%,Stat,
+─── MODEL PICKS ───,,,,,,,,,
+Justin Verlander,SF,4.0,,,OVER,-172,1.31,Model,5.31
+Slade Cecconi,CLE,5.0,,,OVER,-16,0.56,Model,5.56
+Patrick Corbin,TEX,4.5,,,OVER,-125,0.38,Model,4.88
+Nick Lodolo,CIN,5.0,,,OVER,+115,0.37,Model,5.37
+Lucas Giolito,BOS,5.0,,,OVER,-24,0.36,Model,5.36

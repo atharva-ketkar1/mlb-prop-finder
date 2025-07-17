@@ -1,12 +1,12 @@
-Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
-Clay Holmes,NYM,3.0,2.5,3.5,UNDER,-184,15.4%,Stat,
-Aaron Civale,CWS,4.0,3.5,4.5,UNDER,-165,13.0%,Stat,
-Jake Irvin,WSH,4.0,4.5,3.5,UNDER,-27,13.0%,Stat,
-Mitch Keller,PIT,5.0,,5.5,UNDER,-167,12.5%,Stat,
-Nick Pivetta,SD,6.0,6.5,5.5,OVER,-161,12.5%,Stat,
-─── MODEL PICKS ───,,,,,,,,,
-Sonny Gray,STL,5.0,,,OVER,-4,1.8,Model,6.8
-Hunter Brown,HOU,6.0,,,OVER,-20,1.07,Model,7.07
-Nick Pivetta,SD,6.0,,,OVER,-161,1.06,Model,7.06
-Freddy Peralta,MIL,6.0,,,OVER,-26,0.94,Model,6.94
-Jake Irvin,WSH,4.0,,,OVER,-164,0.75,Model,4.75
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks,Actual_SO,Result
+Clay Holmes,NYM,3.0,2.5,3.5,UNDER,-184.0,15.4%,Stat,,2.0,HIT
+Aaron Civale,CWS,4.0,3.5,4.5,UNDER,-165.0,13.0%,Stat,,3.0,HIT
+Jake Irvin,WSH,4.0,4.5,3.5,UNDER,-27.0,13.0%,Stat,,5.0,MISS
+Mitch Keller,PIT,5.0,,5.5,UNDER,-167.0,12.5%,Stat,,3.0,HIT
+Nick Pivetta,SD,6.0,6.5,5.5,OVER,-161.0,12.5%,Stat,,8.0,HIT
+─── MODEL PICKS ───,,,,,,,,,,,
+Sonny Gray,STL,5.0,,,OVER,-4.0,1.8,Model,6.8,5.0,PUSH
+Hunter Brown,HOU,6.0,,,OVER,-20.0,1.07,Model,7.07,8.0,HIT
+Nick Pivetta,SD,6.0,,,OVER,-161.0,1.06,Model,7.06,8.0,HIT
+Freddy Peralta,MIL,6.0,,,OVER,-26.0,0.94,Model,6.94,7.0,HIT
+Jake Irvin,WSH,4.0,,,OVER,-164.0,0.75,Model,4.75,5.0,HIT
