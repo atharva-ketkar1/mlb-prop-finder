@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
+Dylan Cease,SD,6.0,6.5,5.5,OVER,-172,15.4%,Stat,
+Justin Verlander,SF,4.0,3.5,3.5,OVER,-170,15.4%,Stat,
+Lucas Giolito,BOS,5.0,4.5,5.5,UNDER,-164,14.2%,Stat,
+Nick Lodolo,CIN,5.0,5.5,4.5,OVER,-162,14.2%,Stat,
+Chris Paddack Jr.,MIN,4.0,4.5,4.5,UNDER,-165,13.0%,Stat,
+─── MODEL PICKS ───,,,,,,,,,
+Quinn Priester,MIL,3.5,,,OVER,-124,2.5,Model,6.0
+Michael Soroka,WSH,4.0,,,OVER,-10,2.03,Model,6.03
+Brandon Pfaadt,AZ,4.5,,,OVER,-114,1.89,Model,6.39
+Justin Verlander,SF,4.0,,,OVER,-170,1.3,Model,5.3
+Patrick Corbin,TEX,4.5,,,OVER,-114,0.47,Model,4.97
