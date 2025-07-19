@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
+Cal Quantrill,MIA,3.0,3.5,2.5,OVER,-186,18.6%,Stat,
+Joey Wentz,ATL,3.0,2.5,2.5,OVER,-170,13.8%,Stat,
+Nick Martinez,CIN,4.0,3.5,3.5,OVER,-168,13.8%,Stat,
+Ryne Nelson,AZ,4.0,3.5,3.5,OVER,-170,13.8%,Stat,
+Mitchell Parker,WSH,3.0,3.5,3.5,UNDER,-166,12.5%,Stat,
+─── MODEL PICKS ───,,,,,,,,,
+Freddy Peralta,MIL,5.0,,,OVER,-14,1.88,Model,6.88
+Yusei Kikuchi,LAA,5.5,,,OVER,-14,1.77,Model,7.27
+Dean Kremer,BAL,4.0,,,OVER,-19,1.7,Model,5.7
+Cal Quantrill,MIA,3.0,,,OVER,-186,1.47,Model,4.47
+Joey Wentz,ATL,3.0,,,OVER,-170,1.28,Model,4.28
