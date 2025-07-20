@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
+Germán Márquez,COL,4.0,4.5,4.5,UNDER,-161,12.5%,Stat,
+Joe Ryan,MIN,7.0,6.5,6.5,OVER,-152,11.4%,Stat,
+Tarik Skubal,DET,8.0,7.5,7.5,OVER,-154,10.8%,Stat,
+Bryan Woo,SEA,6.0,6.5,6.5,UNDER,-145,10.0%,Stat,
+Merrill Kelly,AZ,5.0,5.5,4.5,UNDER,-20,10.0%,Stat,
+─── MODEL PICKS ───,,,,,,,,,
+Miles Mikolas,STL,3.5,,,OVER,-117,1.67,Model,5.17
+Bryan Woo,SEA,6.0,,,OVER,-15,1.56,Model,7.56
+Germán Márquez,COL,4.0,,,OVER,-16,0.52,Model,4.52
+Merrill Kelly,AZ,5.0,,,OVER,-150,0.49,Model,5.49
+Tarik Skubal,DET,8.0,,,OVER,-154,0.35,Model,8.35
