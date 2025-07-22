@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
+Kyle Hendricks,LAA,3.0,3.5,3.5,UNDER,-164,13.0%,Stat,
+Landen Roupp,SF,4.0,3.5,4.5,OVER,-24,13.0%,Stat,
+Mitch Keller,PIT,5.0,4.5,4.5,OVER,-158,13.0%,Stat,
+Drew Rasmussen,TB,4.0,3.5,4.5,UNDER,-166,12.5%,Stat,
+Chase Burns,CIN,6.0,5.5,5.5,OVER,-164,12.3%,Stat,
+─── MODEL PICKS ───,,,,,,,,,
+Cam Schlittler,NYY,4.0,,,OVER,-154,1.98,Model,5.98
+J.T. Ginn,ATH,3.0,,,OVER,-20,1.21,Model,4.21
+Framber Valdez,HOU,5.0,,,OVER,-17,1.17,Model,6.17
+Edward Cabrera,MIA,4.5,,,OVER,-114,1.16,Model,5.66
+Jacob Misiorowski,MIL,6.0,,,OVER,-18,0.66,Model,6.66

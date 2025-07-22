@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 
 def scrape_draftkings_mlb():
-    url = "https://sportsbook-nash.draftkings.com/api/sportscontent/dkusil/v1/leagues/84240/categories/1031/subcategories/15221"
+    url = "https://sportsbook-nash.draftkings.com/api/sportscontent/dkusil/v1/leagues/84240/categories/1031/subcategories/18195"
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
         "Referer": "https://sportsbook.draftkings.com/",

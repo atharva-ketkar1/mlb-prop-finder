@@ -1,12 +1,12 @@
-Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
-Zack Wheeler,PHI,8.0,8.5,7.5,OVER,-174,15.9%,Stat,
-Eury Pérez,MIA,5.0,4.5,5.5,UNDER,-163,13.8%,Stat,
-Michael McGreevy,STL,4.0,4.5,4.5,UNDER,-164,13.4%,Stat,
-Carlos Rodón,NYY,5.0,5.5,5.5,UNDER,-168,13.0%,Stat,
-Sean Burke,CWS,4.0,3.5,3.5,OVER,-168,13.0%,Stat,
-─── MODEL PICKS ───,,,,,,,,,
-Randy Vásquez,SD,2.5,,,OVER,-115,2.15,Model,4.65
-Jack Flaherty,DET,6.0,,,OVER,-18,1.32,Model,7.32
-Brady Singer,CIN,5.0,,,OVER,-152,1.24,Model,6.24
-Noah Cameron,KC,4.0,,,OVER,-22,1.19,Model,5.19
-Shane Baz,TB,6.0,,,OVER,-146,1.13,Model,7.13
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks,Actual_SO,Result
+Zack Wheeler,PHI,8.0,8.5,7.5,OVER,-174.0,15.9%,Stat,,10.0,HIT
+Eury Pérez,MIA,5.0,4.5,5.5,UNDER,-163.0,13.8%,Stat,,,
+Michael McGreevy,STL,4.0,4.5,4.5,UNDER,-164.0,13.4%,Stat,,1.0,HIT
+Carlos Rodón,NYY,5.0,5.5,5.5,UNDER,-168.0,13.0%,Stat,,,
+Sean Burke,CWS,4.0,3.5,3.5,OVER,-168.0,13.0%,Stat,,5.0,HIT
+─── MODEL PICKS ───,,,,,,,,,,,
+Randy Vásquez,SD,2.5,,,OVER,-115.0,2.15,Model,4.65,,
+Jack Flaherty,DET,6.0,,,OVER,-18.0,1.32,Model,7.32,6.0,PUSH
+Brady Singer,CIN,5.0,,,OVER,-152.0,1.24,Model,6.24,1.0,MISS
+Noah Cameron,KC,4.0,,,OVER,-22.0,1.19,Model,5.19,7.0,HIT
+Shane Baz,TB,6.0,,,OVER,-146.0,1.13,Model,7.13,4.0,MISS
