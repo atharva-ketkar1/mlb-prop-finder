@@ -63,9 +63,6 @@ def save_props(df, output_dir="data/mlb_slates", filename_prefix="mlb_pitcher_sl
 def main():
     pp_df = scrape_prizepicks_mlb()
     dk_df = scrape_draftkings_mlb()
-    print("DraftKings dataframe columns:", dk_df.columns)
-    print("DraftKings dataframe preview:")
-    print(dk_df.head())
     ud_df = scrape_underdog_mlb()
 
     pp_df['player_key'] = pp_df['player'].apply(name_key)

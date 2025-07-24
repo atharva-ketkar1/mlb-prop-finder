@@ -1,0 +1,12 @@
+Player,Team,Line (PP),Line (DK),Line (UD),Pick,Average Odds,Edge,Source,Predicted Ks
+Eric Lauer,TOR,5.0,4.5,4.5,OVER,-170,13.8%,Stat,
+Logan Evans,SEA,4.0,3.5,4.5,UNDER,-164,13.4%,Stat,
+Yu Darvish,SD,4.0,4.5,4.5,UNDER,-156,12.5%,Stat,
+Luis Severino,ATH,5.0,5.5,4.5,UNDER,-134,12.3%,Stat,
+Reese Olson,DET,4.0,4.5,4.5,UNDER,-151,11.1%,Stat,
+─── MODEL PICKS ───,,,,,,,,,
+Sonny Gray,STL,5.0,,,OVER,-24,1.68,Model,6.68
+Yusei Kikuchi,LAA,6.0,,,OVER,-18,1.1,Model,7.1
+Eric Lauer,TOR,5.0,,,OVER,-170,1.04,Model,6.04
+Jason Alexander,HOU,4.0,,,OVER,-21,0.36,Model,4.36
+Logan Webb,SF,5.5,,,UNDER,-107,-0.53,Model,4.97
